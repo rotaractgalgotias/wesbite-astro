@@ -1,0 +1,25 @@
+{
+  "short_name": "RcGEI",
+  "name": "Rotract Club of Galgotias Educational Institutions",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo-circle-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo-circle-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#f3575e",
+  "background_color": "#f3f4f6"
+}

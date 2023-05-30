@@ -2,7 +2,14 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				dmSans: ["DM Sans", "sans-serif"],
+				outfit: ["Outfit Variable", "sans-serif"],
+			},
+		},
 	},
-	plugins: [],
+	plugins: [
+		require('prettier-plugin-tailwindcss'),
+	],
 }
