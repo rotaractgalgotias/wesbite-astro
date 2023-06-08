@@ -8,13 +8,15 @@ interface SubGroup{
 }
 
 interface Team {
+  id: string;
   name: string;
   subGroups: SubGroup[];
 }
 
 export const TeamData:Team[] = [
   {
-    name:"Council",
+    id:"council",
+    name:"Board Council",
     subGroups:[
       {
         name:"President",
@@ -79,7 +81,8 @@ export const TeamData:Team[] = [
     ]
   },
   {
-    name:"Directors",
+    id:"directors",
+    name:"Board of Directors",
     subGroups:[
       {
         name:"Club Service",
@@ -219,6 +222,7 @@ export const TeamData:Team[] = [
     ]
   },
   {
+    id:"coordinators",
     name:"Coordinators",
     subGroups:[
       {

@@ -28,10 +28,10 @@ const Team = () => {
     <div className={"w-full"}>
       {TeamData.map((group) => {
         return (
-          <div id={group.name}>
+          <div id={group.id}>
             <div className={'flex flex-row gap-5 w-full items-center py-5'}>
-              <h3 className={"text-3xl font-bold"}>{group.name}</h3>
-              <div className={'flex-grow h-1 mt-2 w-full bg-black'}></div>
+              <h3 className={"flex-grow w-fit whitespace-nowrap text-3xl font-bold"}>{group.name}</h3>
+              <div className={'h-1 mt-2 w-full bg-black'}></div>
             </div>
             <div className="grid grid-cols-6 gap-4 py-10 px-2 md:px-5 bg-gray-200">
               {group.subGroups.map((subGroup) =>
