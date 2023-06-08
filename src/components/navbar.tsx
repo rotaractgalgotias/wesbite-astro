@@ -24,7 +24,7 @@ export function Navbar(props: Props) {
   return (
     <nav
       className={
-        "container mx-auto mt-5 flex w-[95vw] flex-row items-center justify-between rounded-lg px-4 py-3 md:my-8 md:bg-white md:px-8 md:shadow-sm"
+        "container mx-auto mt-5 flex w-[95vw] flex-row items-center justify-between rounded-lg px-4 py-3 md:my-8 md:bg-white md:px-8 md:shadow-lg"
       }
     >
       <div className={"flex flex-row items-center gap-3"}>

@@ -5,6 +5,7 @@ import '@fontsource/dm-sans';
 import '../global.css'
 
 import {Navbar} from "../components/navbar";
+import Footer from "../components/footer";
 
 export interface Props {
 	title: string;
@@ -25,5 +26,6 @@ const { title , description,ogImage} = Astro.props;
 <body class={`bg-gray-100 px-5 md:px-auto`}>
 <Navbar client:only="react"/>
 <slot/>
+<Footer/>
 </body>
 </html>
