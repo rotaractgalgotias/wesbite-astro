@@ -56,9 +56,9 @@ export function Navbar(props: Props) {
           "hidden flex-row items-center justify-between gap-10 font-dmSans text-xl font-medium md:flex"
         }
       >
-        <a href={"#"}>Home</a>
-        <a href={"#about"}>About</a>
-        <a href={"#"}>Team</a>
+        <a href={"/"}>Home</a>
+        <a href={"/about"}>About</a>
+        <a href={"/team"}>Team</a>
         <a href={"#"}>Events</a>
         <a href={"#"}>Contact</a>
       </div>

@@ -3,5 +3,11 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react"
+  },
+  "baseUrl": ".",
+  "paths": {
+    "astro/components/*": ["./src/components/*"],
+    "astro/hooks/*": ["./src/hooks/*"],
+    "astro/*": ["./src/*"]
   }
 }

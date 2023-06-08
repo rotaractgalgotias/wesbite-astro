@@ -1,9 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import {HeroSlider} from "../components/hero-slider";
-import {RiArrowRightSLine} from "react-icons/ri";
-
+import { HeroSlider } from "../components/hero-slider";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const sliderImages = [
   {
@@ -30,415 +29,436 @@ const sliderImages = [
 ---
 
 <Layout
-        title="RcGEI | Rotaract Galgotias Website"
-        description="At Rotaract Galgotias, we function as a service-oriented organization that strives to create a better world through volunteerism, community service, and professional development. We are a part of the global network of Rotaract clubs sponsored by Rotary International, which gives us access to a wealth of resources and opportunities for growth."
-        ogImage="/og.png"
+  title="RcGEI | Rotaract Galgotias Website"
+  description="At Rotaract Galgotias, we function as a service-oriented organization that strives to create a better world through volunteerism, community service, and professional development. We are a part of the global network of Rotaract clubs sponsored by Rotary International, which gives us access to a wealth of resources and opportunities for growth."
+  ogImage="/og.png"
 >
-    <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
-        <div class={"container grid grid-cols-12 gap-5"}>
-            <div class={"col-span-12 block lg:col-span-6 lg:hidden"}>
-                <HeroSlider sliderImages={sliderImages} client:only="react"/>
-            </div>
-            <div class={"col-span-12 flex flex-col gap-4 lg:col-span-6"}>
-                <h1
-                        class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
-                >
-                    Committed to making a positive impact in our community.
-                </h1>
-                <p class={"font-dmSans text-sm text-slate-600 md:text-lg"}>
-                    At Rotaract Galgotias, we function as a service-oriented organization
-                    that strives to create a better world through volunteerism, community
-                    service, and professional development. We are a part of the global
-                    network of Rotaract clubs sponsored by Rotary International, which
-                    gives us access to a wealth of resources and opportunities for growth.
-                </p>
-                <div class={"flex gap-4"}>
-                    <button
-                            class={"rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg"}
-                    >
-                        Join Now
-                    </button>
-                    <button
-                            class={"rounded-md bg-slate-100 px-4 py-2 font-dmSans text-lg font-bold text-slate-800"}
-                    >
-                        Know More
-                    </button>
-                </div>
-            </div>
-            <div class={"col-span-12 hidden lg:col-span-6 lg:block"}>
-                <HeroSlider sliderImages={sliderImages} client:only="react"/>
-            </div>
-        </div>
-
-        <div class={"container flex flex-col"}>
-            <hr class={"my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}/>
-            <div
-                    class={"flex flex-row flex-wrap items-center justify-center gap-4 lg:justify-between"}
-            >
-                <img
-                        height={100}
-                        width={170}
-                        title={"Rotary International"}
-                        alt={"Rotary International"}
-                        src={"/logos/rotary.png"}
-                        class={""}
-                />
-                <img
-                        height={120}
-                        width={230}
-                        title={"Rotaract"}
-                        alt={"Rotaract"}
-                        src={"/logos/rotaract.png"}
-                        class={""}
-                />
-                <img
-                        height={120}
-                        width={145}
-                        title={"Rotary Theme"}
-                        alt={"Rotary Theme"}
-                        src={"/logos/imagine.png"}
-                        class={""}
-                />
-                <img
-                        height={100}
-                        width={90}
-                        title={"District Rotaract Club"}
-                        alt={"District Rotaract Club"}
-                        src={"/logos/aspire.png"}
-                        class={""}
-                />
-                <img
-                        height={90}
-                        width={90}
-                        title={"Galgotias Educational Institutions"}
-                        alt={"Galgotias Educational Institutions"}
-                        src={"/logos/galgotia.png"}
-                        class={""}
-                />
-            </div>
-            <hr class={"my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}/>
-        </div>
-
-        <div
-                id={"about"}
-                class={"container grid grid-cols-12 gap-y-10 lg:gap-x-10"}
+  <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
+    <div class={"container grid grid-cols-12 gap-5"}>
+      <div class={"col-span-12 block lg:col-span-6 lg:hidden"}>
+        <HeroSlider sliderImages={sliderImages} client:only="react" />
+      </div>
+      <div class={"col-span-12 flex flex-col gap-4 lg:col-span-6"}>
+        <h1
+          class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
         >
-            <div class={"col-span-12 lg:col-span-6"}>
-                <img
-                        height={900}
-                        width={600}
-                        title={"Rotaract Galgotias"}
-                        alt={"Rotaract Galgotias"}
-                        src={"/about_image.jpg"}
-                        class={"h-full w-full rounded-lg object-cover"}
-                />
-            </div>
-            <div
-                    class={"col-span-12 flex flex-col items-start justify-between gap-3 lg:col-span-6"}
-            >
-                <h1
-                        class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-5xl"}
-                >
-                    About Us
-                </h1>
-                <p class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}>
-                    We are the Rotaract Club of Galgotias Educational Institutions,
-                    dedicated to creating positive change in our community through
-                    volunteerism, community service, and professional development. Join us
-                    to empower young professionals, promote peace, eradicate poverty,
-                    support education, improve health, protect the environment, develop
-                    leadership skills, and make a tangible impact.
-                </p>
-                <ul class={"flex list-disc flex-col gap-2 "}>
-                    <li
-                            class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}
-                    >
-                        Engaged in volunteerism, community service, and professional
-                        development.
-                    </li>
-                    <li
-                            class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}
-                    >
-                        Focus on empowering young professionals, promoting peace,
-                        eradicating poverty, supporting education, improving health, and
-                        protecting the environment.
-                    </li>
-                    <li
-                            class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}
-                    >
-                        Opportunities to develop leadership skills and make a tangible
-                        impact.
-                    </li>
-                </ul>
-                <a href={"#"} class={"text-sm text-rose-500 hover:underline flex flex-row items-center w-fit"}>
-                    <span class="pb-1">Know More About Us</span>
-
-                    <RiArrowRightSLine  client:only="react" class={"inline-block"}/>
-                </a>
-            </div>
+          Committed to making a positive impact in our community.
+        </h1>
+        <p class={"font-dmSans text-sm text-slate-600 md:text-lg"}>
+          At Rotaract Galgotias, we function as a service-oriented organization
+          that strives to create a better world through volunteerism, community
+          service, and professional development. We are a part of the global
+          network of Rotaract clubs sponsored by Rotary International, which
+          gives us access to a wealth of resources and opportunities for growth.
+        </p>
+        <div class={"flex gap-4"}>
+          <button
+            class={"rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg"}
+          >
+            Join Now
+          </button>
+          <button
+            class={"rounded-md bg-slate-100 px-4 py-2 font-dmSans text-lg font-bold text-slate-800"}
+          >
+            Know More
+          </button>
         </div>
+      </div>
+      <div class={"col-span-12 hidden lg:col-span-6 lg:block"}>
+        <HeroSlider sliderImages={sliderImages} client:only="react" />
+      </div>
+    </div>
 
-        <hr
-                class={"container my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}
+    <div class={"container flex flex-col"}>
+      <hr class={"my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"} />
+      <div
+        class={"flex flex-row flex-wrap items-center justify-center gap-4 lg:justify-between"}
+      >
+        <img
+          height={100}
+          width={170}
+          title={"Rotary International"}
+          alt={"Rotary International"}
+          src={"/logos/rotary.png"}
+          class={""}
         />
-        <div
-                id={"events"}
-                class={"container grid grid-cols-12  gap-y-10 lg:gap-x-10"}
-        >
-            <div
-                    class={"col-span-12 flex flex-col items-start justify-between gap-3 lg:col-span-6"}
-            >
-                <h1
-                        class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-5xl"}
-                >
-                    Our Events
-                </h1>
-                <p class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}>
-                    We do events which not only bring the community together but also
-                    strive to create a lasting impact. From fundraising initiatives to
-                    awareness campaigns, our events aim to inspire change, foster
-                    collaboration, and address pressing social issues.
-                </p>
-                <div class={"grid w-full grid-cols-12 gap-4"}>
-                    <div
-                            class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-6"}
-                    >
-                        <div class={"col-span-full md:col-span-1"}>
-                            <img
-                                    height={30}
-                                    width={30}
-                                    src={"/icons/star_struck-emoji.svg"}
-                                    alt={"Star Struck Emoji"}
-                                    class={"md:mx-auto"}
-                            />
-                        </div>
-                        <div class={"col-span-full md:col-span-4"}>
-                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
-                                View All Events
-                            </h1>
-                            <p class={"font-dmSans text-sm text-slate-600"}>
-                                We organize a variety of events throughout the year. Check out
-                                our calendar to see what&apos;s coming up next./
-                            </p>
-                            <a href={"#"}
-                               class={"text-sm text-rose-500 hover:underline flex flex-row items-center w-fit"}>
-                                <span class="pb-1">All Events</span>
-
-                                <RiArrowRightSLine  client:only="react" class={"inline-block"}/>
-                            </a>
-                        </div>
-                    </div>
-                    <div
-                            class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-6"}
-                    >
-                        <div class={"col-span-full md:col-span-1"}>
-                            <img
-                                    height={32}
-                                    width={32}
-                                    src={"/icons/think.png"}
-                                    alt={"Think"}
-                                    class={"md:mx-auto"}
-                            />
-                        </div>
-                        <div class={"col-span-full md:col-span-4"}>
-                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
-                                Suggest an Event
-                            </h1>
-                            <p class={"font-dmSans text-sm text-slate-600"}>
-                                We are always open to new ideas and suggestions. If you have an
-                                idea for an event, please let us know.
-                            </p>
-                            <a href={"#"} class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}>
-                                <span class="pb-1">Contact us</span>
-                                <RiArrowRightSLine  client:only="react" class={"inline-block"}/>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class={"col-span-12 lg:col-span-6"}>
-
-                <HeroSlider sliderImages={sliderImages} client:only="react"/>
-            </div>
-        </div>
-        <hr
-                class={"container my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}
+        <img
+          height={120}
+          width={230}
+          title={"Rotaract"}
+          alt={"Rotaract"}
+          src={"/logos/rotaract.png"}
+          class={""}
         />
-        <div
-                id={"council"}
-                class={"container grid grid-cols-12 gap-y-10 lg:gap-x-10"}
+        <img
+          height={120}
+          width={145}
+          title={"Rotary Theme"}
+          alt={"Rotary Theme"}
+          src={"/logos/imagine.png"}
+          class={""}
+        />
+        <img
+          height={100}
+          width={90}
+          title={"District Rotaract Club"}
+          alt={"District Rotaract Club"}
+          src={"/logos/aspire.png"}
+          class={""}
+        />
+        <img
+          height={90}
+          width={90}
+          title={"Galgotias Educational Institutions"}
+          alt={"Galgotias Educational Institutions"}
+          src={"/logos/galgotia.png"}
+          class={""}
+        />
+      </div>
+      <hr class={"my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"} />
+    </div>
+
+    <div
+      id={"about"}
+      class={"container grid grid-cols-12 gap-y-10 lg:gap-x-10"}
+    >
+      <div class={"col-span-12 lg:col-span-6"}>
+        <img
+          height={900}
+          width={600}
+          title={"Rotaract Galgotias"}
+          alt={"Rotaract Galgotias"}
+          src={"/about_image.jpg"}
+          class={"h-full w-full rounded-lg object-cover"}
+        />
+      </div>
+      <div
+        class={"col-span-12 flex flex-col items-start justify-between gap-3 lg:col-span-6"}
+      >
+        <h1
+          class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-5xl"}
         >
-            <h1
-                    class={"col-span-full mx-auto w-fit font-outfit text-3xl font-extrabold text-slate-800 lg:text-5xl"}
-            >
-                Our Council
-            </h1>
-            <div class={"col-span-full"}>
-                <div class={"grid grid-cols-6 gap-5"}>
-                    <div
-                            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
-                    >
-                        <img
-                                src={"/council/prachee.jpg"}
-                                alt={"Prachee"}
-                                height={300}
-                                width={300}
-                                class={"rounded-full"}
-                        />
-                        <div class={"flex flex-col items-center justify-center"}>
+          About Us
+        </h1>
+        <p class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}>
+          We are the Rotaract Club of Galgotias Educational Institutions,
+          dedicated to creating positive change in our community through
+          volunteerism, community service, and professional development. Join us
+          to empower young professionals, promote peace, eradicate poverty,
+          support education, improve health, protect the environment, develop
+          leadership skills, and make a tangible impact.
+        </p>
+        <ul class={"flex list-disc flex-col gap-2 "}>
+          <li
+            class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}
+          >
+            Engaged in volunteerism, community service, and professional
+            development.
+          </li>
+          <li
+            class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}
+          >
+            Focus on empowering young professionals, promoting peace,
+            eradicating poverty, supporting education, improving health, and
+            protecting the environment.
+          </li>
+          <li
+            class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}
+          >
+            Opportunities to develop leadership skills and make a tangible
+            impact.
+          </li>
+        </ul>
+        <a
+          href={"#"}
+          class={"text-sm text-rose-500 hover:underline flex flex-row items-center w-fit"}
+        >
+          <span class="pb-1">Know More About Us</span>
+
+          <RiArrowRightSLine client:only="react" class={"inline-block"} />
+        </a>
+      </div>
+    </div>
+
+    <hr
+      class={"container my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}
+    />
+    <div
+      id={"events"}
+      class={"container grid grid-cols-12  gap-y-10 lg:gap-x-10"}
+    >
+      <div
+        class={"col-span-12 flex flex-col items-start justify-between gap-3 lg:col-span-6"}
+      >
+        <h1
+          class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-5xl"}
+        >
+          Our Events
+        </h1>
+        <p class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg"}>
+          We do events which not only bring the community together but also
+          strive to create a lasting impact. From fundraising initiatives to
+          awareness campaigns, our events aim to inspire change, foster
+          collaboration, and address pressing social issues.
+        </p>
+        <div class={"grid w-full grid-cols-12 gap-4"}>
+          <div
+            class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-6"}
+          >
+            <div class={"col-span-full md:col-span-1"}>
+              <img
+                height={30}
+                width={30}
+                src={"/icons/star_struck-emoji.svg"}
+                alt={"Star Struck Emoji"}
+                class={"md:mx-auto"}
+              />
+            </div>
+            <div class={"col-span-full md:col-span-4"}>
+              <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                View All Events
+              </h1>
+              <p class={"font-dmSans text-sm text-slate-600"}>
+                We organize a variety of events throughout the year. Check out
+                our calendar to see what&apos;s coming up next./
+              </p>
+              <a
+                href={"#"}
+                class={"text-sm text-rose-500 hover:underline flex flex-row items-center w-fit"}
+              >
+                <span class="pb-1">All Events</span>
+
+                <RiArrowRightSLine client:only="react" class={"inline-block"} />
+              </a>
+            </div>
+          </div>
+          <div
+            class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-6"}
+          >
+            <div class={"col-span-full md:col-span-1"}>
+              <img
+                height={32}
+                width={32}
+                src={"/icons/think.png"}
+                alt={"Think"}
+                class={"md:mx-auto"}
+              />
+            </div>
+            <div class={"col-span-full md:col-span-4"}>
+              <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                Suggest an Event
+              </h1>
+              <p class={"font-dmSans text-sm text-slate-600"}>
+                We are always open to new ideas and suggestions. If you have an
+                idea for an event, please let us know.
+              </p>
+              <a
+                href={"#"}
+                class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+              >
+                <span class="pb-1">Contact us</span>
+                <RiArrowRightSLine client:only="react" class={"inline-block"} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class={"col-span-12 lg:col-span-6"}>
+        <HeroSlider sliderImages={sliderImages} client:only="react" />
+      </div>
+    </div>
+    <hr
+      class={"container my-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}
+    />
+    <div
+      id={"team"}
+      class={"container grid grid-cols-12 gap-y-10 lg:gap-x-10"}
+    >
+      <h1
+        class={"col-span-full mx-auto w-fit font-outfit text-3xl font-extrabold text-slate-800 lg:text-5xl"}
+      >
+        Our Council
+      </h1>
+      <div class={"col-span-full"}>
+        <div class={"grid grid-cols-6 gap-5"}>
+          <div
+            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
+          >
+            <img
+              src={"/team/Prachee Singh.jpg"}
+              alt={"Prachee"}
+              height={300}
+              width={300}
+              class={"rounded-full"}
+            />
+            <div class={"flex flex-col items-center justify-center"}>
               <span class={"font-dmSans text-sm font-bold"}>
                 Rtr. Prachee Singh
               </span>
-                            <span class={"font-dmSans text-xs"}>President</span>
-                        </div>
-                    </div>
-                    <div
-                            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
-                    >
-                        <img
-                                src={"/council/rudransh.jpg"}
-                                alt={"Prachee"}
-                                height={300}
-                                width={300}
-                                class={"rounded-full"}
-                        />
-                        <div class={"flex flex-col items-center justify-center"}>
+              <span class={"font-dmSans text-xs"}>President</span>
+            </div>
+          </div>
+          <div
+            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
+          >
+            <img
+              src={"/team/Rudransh Tripathi.jpg"}
+              alt={"Rudransh Tripathi"}
+              height={300}
+              width={300}
+              class={"rounded-full"}
+            />
+            <div class={"flex flex-col items-center justify-center"}>
               <span class={"font-dmSans text-sm font-bold"}>
                 Rtr. Rudransh Tripathi
               </span>
-                            <span class={"font-dmSans text-xs"}>Secretary</span>
-                        </div>
-                    </div>
-                    <div
-                            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
-                    >
-                        <img
-                                src={"/council/harshit.jpg"}
-                                alt={"Prachee"}
-                                height={300}
-                                width={300}
-                                class={"rounded-full"}
-                        />
-                        <div class={"flex flex-col items-center justify-center"}>
+              <span class={"font-dmSans text-xs"}>Secretary</span>
+            </div>
+          </div>
+          <div
+            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
+          >
+            <img
+              src={"/team/Harshit Ratnam.jpg"}
+              alt={"Prachee"}
+              height={300}
+              width={300}
+              class={"rounded-full"}
+            />
+            <div class={"flex flex-col items-center justify-center"}>
               <span class={"font-dmSans text-sm font-bold"}>
                 Rtr. Harshit Ratnam
               </span>
-                            <span class={"font-dmSans text-xs"}>Vice President</span>
-                        </div>
-                    </div>
-                    <div
-                            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
-                    >
-                        <img
-                                src={"/council/vaishnav.jpg"}
-                                alt={"Prachee"}
-                                height={300}
-                                width={300}
-                                class={"rounded-full"}
-                        />
-                        <div class={"flex flex-col items-center justify-center"}>
+              <span class={"font-dmSans text-xs"}>Vice President</span>
+            </div>
+          </div>
+          <div
+            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
+          >
+            <img
+              src={"/team/Vaishnav Sharan.jpg"}
+              alt={"Prachee"}
+              height={300}
+              width={300}
+              class={"rounded-full"}
+            />
+            <div class={"flex flex-col items-center justify-center"}>
               <span class={"font-dmSans text-sm font-bold"}>
                 Rtr. Vaishnav Sharan
               </span>
-                            <span class={"font-dmSans text-xs"}>Joint Secretary</span>
-                        </div>
-                    </div>
-                    <div
-                            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
-                    >
-                        <img
-                                src={"/council/kalash.jpg"}
-                                alt={"Prachee"}
-                                height={300}
-                                width={300}
-                                class={"rounded-full"}
-                        />
-                        <div class={"flex flex-col items-center justify-center"}>
+              <span class={"font-dmSans text-xs"}>Joint Secretary</span>
+            </div>
+          </div>
+          <div
+            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
+          >
+            <img
+              src={"/team/Kalash Gupta.jpg"}
+              alt={"Prachee"}
+              height={300}
+              width={300}
+              class={"rounded-full"}
+            />
+            <div class={"flex flex-col items-center justify-center"}>
               <span class={"font-dmSans text-sm font-bold"}>
                 Rtr. Kalash Gupta
               </span>
-                            <span class={"font-dmSans text-xs"}>Treasurer</span>
-                        </div>
-                    </div>
-                    <div
-                            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
-                    >
-                        <img
-                                src={"/council/rashi.jpg"}
-                                alt={"Prachee"}
-                                height={300}
-                                width={300}
-                                class={"rounded-full"}
-                        />
-                        <div class={"flex flex-col items-center justify-center"}>
+              <span class={"font-dmSans text-xs"}>Treasurer</span>
+            </div>
+          </div>
+          <div
+            class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
+          >
+            <img
+              src={"/team/Rashi Srivastava.jpg"}
+              alt={"Prachee"}
+              height={300}
+              width={300}
+              class={"rounded-full"}
+            />
+            <div class={"flex flex-col items-center justify-center"}>
               <span class={"font-dmSans text-sm font-bold"}>
                 Rtr. Rashi Srivastava
               </span>
-                            <span class={"font-dmSans text-xs"}>Seargent-at-Arms</span>
-                        </div>
-                    </div>
-                </div>
-                <div class={"mx-auto my-8 flex flex-col items-center justify-center"}>
-                    <div class="flex -space-x-4">
-                        <img
-                                height={20}
-                                width={20}
-                                class="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
-                                src="https://unsplash.it/300/300?random=1"
-                                alt=""
-                        />
-                        <img
-                                height={20}
-                                width={20}
-                                class="h-10 w-10 rounded-full border-2 border-white"
-                                src="https://unsplash.it/300/300?random=2"
-                                alt=""
-                        />
-                        <img
-                                height={20}
-                                width={20}
-                                class="h-10 w-10 rounded-full border-2 border-white"
-                                src="https://unsplash.it/300/300?random=3"
-                                alt=""
-                        />
-                        <img
-                                height={20}
-                                width={20}
-                                class="h-10 w-10 rounded-full border-2 border-white"
-                                src="https://unsplash.it/300/300?random=4"
-                                alt=""
-                        />
-                        <img
-                                height={20}
-                                width={20}
-                                class="h-10 w-10 rounded-full border-2 border-white"
-                                src="https://unsplash.it/300/300?random=5"
-                                alt=""
-                        />
-                        <img
-                                height={20}
-                                width={20}
-                                class="h-10 w-10 rounded-full border-2 border-white"
-                                src="https://unsplash.it/300/300?random=6"
-                                alt=""
-                        />
-                    </div>
-                    <div class="mt-2 flex -space-x-2">
+              <span class={"font-dmSans text-xs"}>Seargent-at-Arms</span>
+            </div>
+          </div>
+        </div>
+        <div class={"mx-auto my-8 flex flex-col items-center justify-center"}>
+          <div class="flex -space-x-4">
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
+                      src="/team/Ashish%20Kumar%20Gupta.jpg"
+                      alt=""
+              />
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white"
+                      src="/team/Aditya%20Ojha.jpg"
+                      alt=""
+              />
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white"
+                      src="/team/Unnati%20Agarwal.jpg"
+                      alt=""
+              />
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white"
+                      src="/team/Rohit%20Saini.jpg"
+                      alt=""
+              />
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white"
+                      src="/team/Yashica%20Chauhan.jpg"
+                      alt=""
+              />
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white"
+                      src="/team/Avinash%20Rai.jpg"
+                      alt=""
+              />
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white"
+                      src="/team/Vaishnavi%20Srivastava.jpg"
+                      alt=""
+              />
+              <img
+                      height={20}
+                      width={20}
+                      class="h-10 w-10 rounded-full border-2 border-white"
+                      src="/team/Adarsh%20Rai.jpg"
+                      alt=""
+              />
+          </div>
+          <div class="mt-2 flex -space-x-2">
             <span class="text-sm font-semibold text-rose-500">
               <a
-                      href="#"
-                      class="flex flex-row items-center justify-center hover:underline"
+                href="/team"
+                class="flex flex-row items-center justify-center hover:underline"
               >
                 <span>View Full RcGEI Team</span>
-                <RiArrowRightSLine  client:only="react" class={"mt-1 text-xl"}/>
+                <RiArrowRightSLine client:only="react" class={"mt-1 text-xl"} />
               </a>
             </span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <hr
-                class={"container -mt-5 mb-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}
-        />
-    </main>
+      </div>
+    </div>
+    <hr
+      class={"container -mt-5 mb-4 h-px w-full border-0 bg-gray-200 dark:bg-gray-700"}
+    />
+  </main>
 </Layout>
