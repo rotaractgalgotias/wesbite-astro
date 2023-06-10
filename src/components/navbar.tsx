@@ -27,25 +27,27 @@ export function Navbar(props: Props) {
         "container mx-auto mt-5 flex w-[95vw] flex-row items-center justify-between rounded-lg px-4 py-3 md:my-8 md:bg-white md:px-8 md:shadow-lg"
       }
     >
-      <div className={"flex flex-row items-center gap-3"}>
-        <img
-          src={"/logo-circle.png"}
-          alt={"Rotaract Galgotias Logo"}
-          className={'h-14'}
-        />
-        <div className={"hidden flex-col md:flex"}>
-          <span className={"h-7 font-outfit text-2xl font-bold"}>
-            Rotaract Club
-          </span>
-          <span className={"font-outfit text-sm font-medium"}>
-            Galgotias Educational Institutions
-          </span>
-        </div>
-        <div className={"flex flex-col md:hidden"}>
-          <span className={"h-6 font-outfit text-xl font-bold"}>Rotaract</span>
-          <span className={"font-outfit text-xs font-medium"}>Galgotias</span>
-        </div>
-      </div>
+      <a href={'/'}>
+          <div className={"flex flex-row items-center gap-3"}>
+            <img
+              src={"/logo-circle.png"}
+              alt={"Rotaract Galgotias Logo"}
+              className={'h-14 -ml-3 lg:ml-auto'}
+            />
+            <div className={"hidden flex-col md:flex"}>
+              <span className={"h-7 font-outfit text-2xl font-bold"}>
+                Rotaract Club
+              </span>
+              <span className={"font-outfit text-sm font-medium"}>
+                Galgotias Educational Institutions
+              </span>
+            </div>
+            <div className={"flex flex-col md:hidden"}>
+              <span className={"h-6 font-outfit text-xl font-bold"}>Rotaract</span>
+              <span className={"font-outfit text-xs font-medium"}>Galgotias</span>
+            </div>
+          </div>
+      </a>
 
       <div>
         <RiMenu3Line className={"cursor-pointer text-4xl md:hidden"}  onClick={()=>{setShowMenu(true)}}/>
@@ -59,7 +61,7 @@ export function Navbar(props: Props) {
         <a href={"/"}>Home</a>
         <a href={"/about"}>About</a>
         <a href={"/team"}>Team</a>
-        <a href={"#"}>Events</a>
+        <a href={"/events"}>Events</a>
         <a href={"#"}>Contact</a>
       </div>
 
@@ -77,10 +79,10 @@ export function Navbar(props: Props) {
                 "flex flex-col items-center justify-center gap-14 font-dmSans text-4xl"
               }
             >
-              <a href={"#"}>Home</a>
-              <a href={"#about"}>About</a>
-              <a href={"#"}>Team</a>
-              <a href={"#"}>Events</a>
+              <a href={"/"}>Home</a>
+              <a href={"/about"}>About</a>
+              <a href={"/team"}>Team</a>
+              <a href={"/events"}>Events</a>
               <a href={"#"}>Contact</a>
             </div>
           </div>

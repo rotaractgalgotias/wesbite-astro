@@ -1,0 +1,36 @@
+---
+import {getCollection} from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+const events = await getCollection("events");
+---
+
+<Layout>
+    <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
+        <div class={"container grid grid-cols-12 gap-8"}>
+            <div class={"col-span-12 lg:col-span-4 flex flex-col gap-4 justify-between"}>
+                <h1
+                        class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
+                >
+                    Our Events
+                </h1>
+                <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
+                    We organize a variety of fundraising activities, community service projects, and professional development workshops throughout the year. We also collaborate with other clubs and organizations to create meaningful projects that have a lasting impact on our community.
+                </p>
+            </div>
+            {
+              events.map((event)=>(
+                <a href=`/events/${event.slug}` class={"col-span-12 lg:col-span-4 flex flex-col cursor-pointer justify-between px-3 pt-3 border-2 border-gray-300 hover:border-gray-400 rounded-lg"}>
+                    <img src={event.data.image} alt="" class={"rounded-lg shadow w-full h-48 object-cover"}/>
+                    <div class="flex flex-col justify-center h-full">
+                        <h4 class={"font-outfit text-md font-medium text-slate-800 lg:text-lg"}>
+                            {event.data.title}
+                        </h4>
+                    </div>
+                </a>
+              ))
+            }
+
+
+        </div>
+    </main>
+</Layout>

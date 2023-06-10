@@ -1,0 +1,25 @@
+---
+import {getCollection} from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+  const events = await getCollection("events");
+  return events.map((event) => {
+    return {
+      params: {
+        slug: event.slug,
+      },
+      props: {
+        event,
+      },
+    };
+  });
+}
+
+const {event} = Astro.props;
+const {Content} = await event.render()
+---
+<Layout>
+    <div class="prose lg:prose-xl mx-auto">
+        <Content/>
+    </div>
+</Layout>

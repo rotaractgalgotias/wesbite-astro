@@ -6,26 +6,52 @@ import { RiArrowRightSLine } from "react-icons/ri";
 
 const sliderImages = [
   {
-    image: "https://unsplash.it/2000/1000?random=1",
+    image: "/cover/img (19).JPG",
     id: "1",
     alt: "",
   },
   {
-    image: "https://unsplash.it/2000/1000?random=2",
+    image: "/cover/img (18).JPG",
     id: "2",
     alt: "",
   },
   {
-    image: "https://unsplash.it/2000/1000?random=3",
+    image: "/cover/img (3).jpg",
     id: "3",
     alt: "",
   },
   {
-    image: "https://unsplash.it/2000/1000?random=4",
+    image: "/cover/img (4).jpg",
     id: "4",
     alt: "",
   },
 ];
+
+const eventsImages = [
+  {
+    image: "/cover/img (12).JPG",
+    id: "1",
+    alt: "",
+  },
+  {
+    image: "/cover/img (11).JPG",
+    id: "2",
+    alt: "",
+  },
+  {
+    image: "/cover/img (13).JPG",
+    id: "3",
+    alt: "",
+  },
+  {
+    image: "/cover/img (14).JPG",
+    id: "4",
+    alt: "",
+  },
+];
+
+
+
 ---
 
 <Layout
@@ -223,7 +249,7 @@ const sliderImages = [
                 our calendar to see what&apos;s coming up next./
               </p>
               <a
-                href={"#"}
+                href={"/events"}
                 class={"text-sm text-rose-500 hover:underline flex flex-row items-center w-fit"}
               >
                 <span class="pb-1">All Events</span>
@@ -232,6 +258,7 @@ const sliderImages = [
               </a>
             </div>
           </div>
+
           <div
             class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-6"}
           >
@@ -261,10 +288,11 @@ const sliderImages = [
               </a>
             </div>
           </div>
+
         </div>
       </div>
       <div class={"col-span-12 lg:col-span-6"}>
-        <HeroSlider sliderImages={sliderImages} client:only="react" />
+        <HeroSlider sliderImages={eventsImages} client:only="react" />
       </div>
     </div>
     <hr
