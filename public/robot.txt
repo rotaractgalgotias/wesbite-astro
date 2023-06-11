@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rotaractgalgotias.org/sitemap-index.xml
