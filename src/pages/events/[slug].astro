@@ -5,8 +5,6 @@ import {format} from 'date-fns';
 import EventGallery from "../../components/event-gallery";
 export async function getStaticPaths() {
   const events = await getCollection("events");
-
-
   return events.map((event) => {
     return {
       params: {
@@ -61,6 +59,12 @@ const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
     {images.toString()}
     <div class="prose lg:prose-xl mx-auto">
         <Content/>
+        {
+          images.length > 0 &&
+          images.map(image => {
+            return <img src={image} alt={event.data.title} class="rounded-lg mb-14 mx-auto"/>
+          })
+        }
     </div>
-    <EventGallery images={images} event={event.slug} client:only="react"/>
+    <!--<EventGallery images={photos} event={event.slug} client:idle="react"/>-->
 </Layout>
