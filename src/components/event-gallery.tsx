@@ -2,6 +2,9 @@ import {useEffect, useState} from "react";
 import Gallery from "react-photo-gallery";
 
 const EventGallery = ({ images, event }) => {
+
+
+
   async function getPhotosWithAspectRatio(files) {
     const images = files.map(file => {
       return new Promise((resolve) => {

@@ -48,9 +48,14 @@ const photos = Object.keys(images).map( (path) => {
 
 
 ---
-<Layout>
+<Layout
+  title={`${event.data.title} - Rotaract Galgotias`}
+  description={event.data.description}
+  ogImage={event.data.image}
+>
     <div class="relative mb-14 max-w-screen-lg mx-auto">
         <img src={event.data.image} alt={event.data.title} class="rounded-lg"/>
+
         <div class="w-32 h-32 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
             <div class="relative w-full h-full flex-col flex justify-between">
                 <div class="text-2xl font-bold w-full bg-red-600 flex flex-row items-center justify-center text-center text-white py-1">
