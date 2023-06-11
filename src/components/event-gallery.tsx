@@ -25,7 +25,6 @@ const EventGallery = ({ images, event }) => {
   }
 
   const getPhotos = async () => {
-    console.log(images);
     return await getPhotosWithAspectRatio(images);
   };
 
