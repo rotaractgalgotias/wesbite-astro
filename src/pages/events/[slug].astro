@@ -1,8 +1,11 @@
 ---
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import { format } from 'date-fns';
+import EventGallery from "../../components/event-gallery";
 export async function getStaticPaths() {
   const events = await getCollection("events");
+
   return events.map((event) => {
     return {
       params: {
@@ -16,10 +19,53 @@ export async function getStaticPaths() {
 }
 
 const {event} = Astro.props;
+const dateObj = new Date(event.data.date);
+const date = {
+  day: format(dateObj, 'dd'),
+  month: format(dateObj, 'LLL'),
+  year: format(dateObj, 'yyyy'),
+  dayOfWeek : format(dateObj, 'EEEE')
+}
 const {Content} = await event.render()
+
+const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
+  // return files.map(file => {
+  //   const regex = /\/events\/([^/]+)\//;
+  //   const match = file.default.match(regex);
+  //   if(match[1] !== event.slug)
+  //   return file.default;
+  // });
+  return files.filter(file => {
+    const regex = /\/events\/([^/]+)\//;
+    const match = file.default.match(regex);
+    if (match[1] === event.slug)
+      return file.default;
+  }).map(file => {
+    return file.default;
+  });
+});
+
+
 ---
 <Layout>
-    <div class="prose lg:prose-xl mx-auto">
-        <Content/>
+    <div class="relative mb-14 max-w-screen-lg mx-auto">
+        <img src={event.data.image} alt={event.data.title} class="rounded-lg"/>
+        <div class="w-32 h-32 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
+            <div class="relative w-full h-full flex-col flex justify-between">
+              <div class="text-2xl font-bold w-full bg-red-600 flex flex-row items-center justify-center text-center text-white py-1">
+                {date.month.toUpperCase()}
+              </div>
+              <div class="text-5xl font-bold w-full bg-white flex flex-col items-center justify-center text-center text-black ">
+                {date.day}
+              </div>
+              <div class="text-lg font-bold w-full bg-white flex flex-col items-center justify-center text-center text-gray-400 ">
+                {date.dayOfWeek.toUpperCase()}
+              </div>
+            </div>
+        </div>
     </div>
+    <div class="prose lg:prose-xl mx-auto">
+      <Content/>
+    </div>
+    <EventGallery images={images} event={event.slug} client:only="react"/>
 </Layout>

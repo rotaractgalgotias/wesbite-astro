@@ -62,7 +62,6 @@ export function Navbar(props: Props) {
         <a href={"/about"}>About</a>
         <a href={"/team"}>Team</a>
         <a href={"/events"}>Events</a>
-        <a href={"#"}>Contact</a>
       </div>
 
         <div
@@ -83,7 +82,6 @@ export function Navbar(props: Props) {
               <a href={"/about"}>About</a>
               <a href={"/team"}>Team</a>
               <a href={"/events"}>Events</a>
-              <a href={"#"}>Contact</a>
             </div>
           </div>
         </div>

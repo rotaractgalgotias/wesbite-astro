@@ -10,6 +10,15 @@ const eventCollection = defineCollection({
   })
 });
 
+const teamCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    name: z.string(),
+    photo: z.string()
+  })
+});
+
 export const collections = {
-  'events': eventCollection
+  'events': eventCollection,
+  'team' : teamCollection
 };
