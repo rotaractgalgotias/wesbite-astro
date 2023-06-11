@@ -5,9 +5,7 @@ import {format} from 'date-fns';
 import EventGallery from "../../components/event-gallery";
 export async function getStaticPaths() {
   const events = await getCollection("events");
-  const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
-    return files
-  });
+
 
   return events.map((event) => {
     return {
@@ -15,21 +13,13 @@ export async function getStaticPaths() {
         slug: event.slug,
       },
       props: {
-        event,
-        images: images.filter(file => {
-          const regex = /\/events\/([^/]+)\//;
-          const match = file.default.match(regex);
-          if (match && match[1] === event?.slug)
-            return file.default;
-        }).map(file => {
-          return file.default;
-        })
+        event
       },
     };
   });
 }
 
-const {event, images} = Astro.props;
+const {event} = Astro.props;
 const dateObj = new Date(event.data.date);
 const date = {
   day: format(dateObj, 'dd'),
@@ -38,6 +28,18 @@ const date = {
   dayOfWeek: format(dateObj, 'EEEE')
 }
 const {Content} = await event.render()
+
+const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
+    return files.filter(file => {
+        const regex = /\/events\/([^/]+)\//;
+        const match = file.default.match(regex);
+        if (match && match[1] === event?.slug)
+            return file.default;
+    }).map(file => {
+        return file.default;
+    });
+});
+
 ---
 <Layout>
     <div class="relative mb-14 max-w-screen-lg mx-auto">
