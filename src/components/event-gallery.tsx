@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import Gallery from "react-photo-gallery";
 
 const EventGallery = ({ images, event }) => {
@@ -26,8 +26,8 @@ const EventGallery = ({ images, event }) => {
 
   const getPhotos = async () => {
     return  await getPhotosWithAspectRatio(images);
-
   };
+
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
