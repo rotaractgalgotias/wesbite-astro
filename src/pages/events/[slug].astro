@@ -64,7 +64,6 @@ const photos = Object.keys(images).map((path) => {
             </div>
         </div>
     </div>
-    {images.toString()}
     <div class="prose lg:prose-xl mx-auto">
         <Content/>
         {
@@ -74,5 +73,5 @@ const photos = Object.keys(images).map((path) => {
           })
         }
     </div>
-    <EventGallery images={photos} event={event.slug} client:idle="react"/>
+    <EventGallery images={photos} event={event.slug} client:only="react"/>
 </Layout>
