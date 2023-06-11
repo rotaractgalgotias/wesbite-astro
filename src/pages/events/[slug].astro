@@ -27,16 +27,24 @@ const date = {
 }
 const {Content} = await event.render()
 
-const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
-    return files.filter(file => {
-        const regex = /\/events\/([^/]+)\//;
-        const match = file.default.match(regex);
-        if (match && match[1] === event?.slug)
-            return file.default;
-    }).map(file => {
-        return file.default;
-    });
-});
+// const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
+//     return files.filter(file => {
+//         const regex = /\/events\/([^/]+)\//;
+//         const match = file.default.match(regex);
+//         if (match && match[1] === event?.slug)
+//             return file.default;
+//     }).map(file => {
+//         return file.default;
+//     });
+// });
+
+const images = import.meta.glob('/src/assets/events/*/*');
+const photos = Object.keys(images).map((path) => {
+  const regex = /\/events\/([^/]+)\//;
+  const match = path.match(regex);
+  if (match && match[1] === event?.slug)
+    return path;
+}).filter(image => image !== undefined);
 
 ---
 <Layout>
@@ -60,11 +68,11 @@ const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
     <div class="prose lg:prose-xl mx-auto">
         <Content/>
         {
-          images.length > 0 &&
-          images.map(image => {
+          photos.length > 0 &&
+          photos.map(image => {
             return <img src={image} alt={event.data.title} class="rounded-lg mb-14 mx-auto"/>
           })
         }
     </div>
-    <!--<EventGallery images={photos} event={event.slug} client:idle="react"/>-->
+    <EventGallery images={photos} event={event.slug} client:idle="react"/>
 </Layout>
