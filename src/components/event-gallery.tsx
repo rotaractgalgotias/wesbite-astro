@@ -1,5 +1,3 @@
-import { PhotoProvider, PhotoView } from 'react-photo-view';
-import 'react-photo-view/dist/react-photo-view.css';
 import {useCallback, useEffect, useState} from "react";
 import Gallery from "react-photo-gallery";
 
@@ -38,36 +36,10 @@ const EventGallery = ({ images, event }) => {
     });
   }, []);
 
-  const imageRenderer = useCallback(
-    ({ index, left, top, key, photo }) => (
-      <PhotoView src={photo.src} key={key}>
-        <img
-          {...photo}
-          alt={event}
-          className={"h-full rounded-lg object-contain cursor-pointer m-1 h-full"}
-        />
-      </PhotoView>
-    ),[]
-  );
-
   // @ts-ignore
   return (
     <div className={"flex flex-col gap-3 mx-auto my-4"}>
-      {/*<PhotoProvider>*/}
-      {/*  {photos.map((image, index) => (*/}
-      {/*    <PhotoView src={image.src} key={index}>*/}
-      {/*      <img*/}
-      {/*        src={image.src}*/}
-      {/*        alt={event}*/}
-      {/*        className={"h-full rounded-lg object-contain cursor-pointer"}*/}
-      {/*      />*/}
-      {/*    </PhotoView>*/}
-      {/*  ))}*/}
-      {/*</PhotoProvider>*/}
-      <PhotoProvider>
-          {/* @ts-ignore */}
-          <Gallery photos={photos} />
-      </PhotoProvider>
+      <Gallery photos={photos} />
     </div>
   );
 };
