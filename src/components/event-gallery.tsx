@@ -41,7 +41,7 @@ const EventGallery = ({ images, event }) => {
   // @ts-ignore
   return (
     <div className={"flex flex-col gap-3 mx-auto my-4"}>
-      <Gallery photos={images} />
+      <Gallery photos={photos} />
     </div>
   );
 };
