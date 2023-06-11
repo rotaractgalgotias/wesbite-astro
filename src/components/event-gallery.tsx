@@ -25,13 +25,15 @@ const EventGallery = ({ images, event }) => {
   }
 
   const getPhotos = async () => {
-    return  await getPhotosWithAspectRatio(images);
+    console.log(images);
+    return await getPhotosWithAspectRatio(images);
   };
 
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
     getPhotos().then((res) => {
+      console.log(res);
       setPhotos(res);
     });
   }, []);
