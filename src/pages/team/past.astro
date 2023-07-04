@@ -1,0 +1,198 @@
+---
+import Team from '../past';
+import Layout from "../../layouts/Layout.astro";
+import {HeroSlider} from "../../components/hero-slider";
+---
+
+<Layout
+  title="Team - RcGEI | Rotaract Galgotias Website"
+  description="Rotaract Galgotias follows a hierarchical system where the college year determines the roles and responsibilities of its members. The core council comprises final year students, while directors are selected from the third year students. Second year students, on the other hand, actively contribute as coordinators."
+  ogImage="/og.png"
+>
+    <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
+      <div class="container mx-auto " >
+        <h2 class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-5xl"}>
+                    Past Teams
+                </h2>
+      </div>
+        <!-- <div class={"container grid grid-cols-12 gap-8"}>
+            <div class={"col-span-12 lg:col-span-4 flex flex-col gap-4 justify-between"}>
+                <h1
+                        class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
+                >
+                    Team 2022-23
+                </h1>
+                <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
+                    Rotaract Galgotias follows a hierarchical system where the college year determines the roles and responsibilities of its members. The core council comprises final year students, while directors are selected from the third year students. Second year students, on the other hand, actively contribute as coordinators.
+                </p>
+                <div class="flex flex-col gap-3">
+                    <h3 class="font-outfit text-lg font-semibold text-slate-800 lg:text-xl">Team Hierarchy</h3>
+
+                    <a href="#council" class={"grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400"}>
+                        <div class={"col-span-full flex flex-row justify-between items-center"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Board Council
+                            </h1>
+                            <div class="flex -space-x-4">
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Prachee%20Singh.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Rudransh%20Tripathi.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Harshit%20Ratnam.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Vaishnav%20Sharan.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Kalash%20Gupta.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Rashi%20Srivastava.jpg"
+                                  alt=""
+                                />
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#directors" class={"grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400"}>
+                        <div class={"col-span-full flex flex-row items-center justify-between"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Board of Directors
+                            </h1>
+                            <div class="flex -space-x-4">
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
+                                  src="/team/Ashish%20Kumar%20Gupta.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Aditya%20Ojha.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Unnati%20Agarwal.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Rohit%20Saini.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Yashica%20Chauhan.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Avinash%20Rai.jpg"
+                                  alt=""
+                                />
+                                <span class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600" >+13</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#coordinators" class={"grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400"}>
+                        <div class={"col-span-full flex flex-row items-center justify-between"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Coordinators
+                            </h1>
+                            <div class="flex -space-x-4">
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
+                                  src="/team/Areeb%20Ur%20Rub.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Raunak%20Gupta.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Ritik%20Varshney.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Divyanshu%20Katiyar.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Yash%20Gupta.jpg"
+                                  alt=""
+                                />
+                                <img
+                                  height={20}
+                                  width={20}
+                                  class="h-10 w-10 rounded-full border-2 border-white"
+                                  src="/team/Aruhi%20Pallavi.jpg"
+                                  alt=""
+                                />
+                                <span class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600" >+12</span>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+            <div class={"col-span-12 lg:col-span-8"}>
+                <img alt="Intallation Image 2022-23" src="/team_22-23.jpg" class="w-full rounded-lg shadow-lg" />
+            </div>
+        </div> -->
+        <Team/>
+    </main>
+</Layout>
