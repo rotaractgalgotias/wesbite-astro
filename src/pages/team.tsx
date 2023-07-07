@@ -25,7 +25,7 @@ const TeamMemberComponent = ({ member, subGroupName }) => {
 
 const Team = () => {
   return (
-    <div className={"w-full"}>
+    <div className={"w-full container"}>
       {TeamData.map((group) => {
         return (
           <div id={group.id}>

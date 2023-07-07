@@ -1,6 +1,6 @@
 import { TeamData } from "../config/past";
 
-const TeamMemberComponent = ({ member, subGroupName }) => {
+const PastTeamMemberComponent = ({ member, subGroupName }) => {
   return (
     <div
       key={member.id}
@@ -23,9 +23,9 @@ const TeamMemberComponent = ({ member, subGroupName }) => {
   );
 };
 
-const Team = () => {
+const PastTeam = () => {
   return (
-    <div className={"w-full"}>
+    <div className={"container w-full"}>
       {TeamData.map((group) => {
         return (
           <div id={group.id}>
@@ -36,7 +36,7 @@ const Team = () => {
             <div className="grid grid-cols-6 gap-4 py-10 px-2 md:px-5 bg-gray-200">
               {group.subGroups.map((subGroup) =>
                 subGroup.members.map((member) => (
-                  <TeamMemberComponent
+                  <PastTeamMemberComponent
                     key={member.id}
                     member={member}
                     subGroupName={subGroup.name}
@@ -50,4 +50,4 @@ const Team = () => {
     </div>
   );
 };
-export default Team;
+export default PastTeam;
