@@ -238,143 +238,220 @@ export const TeamData:Team[] = [
             mdxFile:""
           },
         ]
+      },
+      {
+        name:"Management Team Head",
+        members:[
+          {
+            id:"D21",
+            fullName:"Arnav Katiyar",
+            mdxFile:""
+          },
+          {
+            id:"D12",
+            fullName:"Saksham Gupta",
+            mdxFile:""
+          },
+          
+        ]
+      },
+      {
+        name:"Performing Arts Head",
+        members:[
+          {
+            id:"D21",
+            fullName:"Bhavya",
+            mdxFile:""
+          },
+          
+        ]
       }
     ]
   },
-  // {
-  //   id:"coordinators",
-  //   name:"Coordinators",
-  //   subGroups:[
-  //     {
-  //       name:"Club Service",
-  //       members:[
-  //         {
-  //           id:"C01",
-  //           fullName:"Ankita Shukla",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C02",
-  //           fullName:"Isha Srivastava",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       name:"Community Service",
-  //       members:[
-  //         {
-  //           id:"C03",
-  //           fullName: "Aman Wadhwani",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C04",
-  //           fullName:"Divyanshu Katiyar",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C05",
-  //           fullName:"Yash Gupta",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       name:"Vocational Service",
-  //       members:[
-  //         {
-  //           id:"C06",
-  //           fullName:"Yash Verma",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C07",
-  //           fullName:"Aruhi Pallavi",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       name:"International Service",
-  //       members:[
-  //         {
-  //           id:"C08",
-  //           fullName:"Shivendra Pratap Singh",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C09",
-  //           fullName:"Sanket Gupta",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       name:"Literary Service",
-  //       members:[
-  //         {
-  //           id:"C10",
-  //           fullName:"Tanay Mishra",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C11",
-  //           fullName:"Numair Pandit",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       name:"Multimedia Service",
-  //       members:[
-  //         {
-  //           id:"C16",
-  //           fullName:"Raunak Gupta",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C17",
-  //           fullName:"Areeb Ur Rub",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C18",
-  //           fullName:"Ritik Varshney",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       name:"Membership Growth",
-  //       members:[
-  //         {
-  //           id:"C12",
-  //           fullName:"Thakur Manu Chauhan",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C13",
-  //           fullName:"Srishti Yadav",
-  //           mdxFile:""
-  //         },
-  //         {
-  //           id:"C14",
-  //           fullName:"Krishna Gupta",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       name:"Photography Service",
-  //       members:[
-  //         {
-  //           id:"C15",
-  //           fullName:"Shweta Yadav",
-  //           mdxFile:""
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // }
+  {
+    id:"coordinators",
+    name:"Coordinators",
+    subGroups:[
+      {
+        name:"Club Service",
+        members:[
+          {
+            id:"C01",
+            fullName:"Abhay Singh",
+            mdxFile:""
+          },
+          {
+            id:"C02",
+            fullName:"Ananya Gupta",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Community Service",
+        members:[
+          {
+            id:"C03",
+            fullName: "Shubham Pandey",
+            mdxFile:""
+          },
+          {
+            id:"C04",
+            fullName:"Krishna Samrat Bajpai",
+            mdxFile:""
+          },
+          {
+            id:"C05",
+            fullName:"Priyesh Singh",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Vocational Service",
+        members:[
+          {
+            id:"C06",
+            fullName:"Kritika Sharma",
+            mdxFile:""
+          },
+          {
+            id:"C07",
+            fullName:"Tripti",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"International Service",
+        members:[
+          {
+            id:"C08",
+            fullName:"Muskan Yadav",
+            mdxFile:""
+          },
+          {
+            id:"C09",
+            fullName:"Rounak Sharma",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Literary Service",
+        members:[
+          {
+            id:"C10",
+            fullName:"Shivansh Nigam",
+            mdxFile:""
+          },
+          {
+            id:"C11",
+            fullName:"Srishti Srivastava",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Multimedia Service",
+        members:[
+          {
+            id:"C16",
+            fullName:"Sonal Singh",
+            mdxFile:""
+          },
+          {
+            id:"C17",
+            fullName:"Deepak Kushwaha",
+            mdxFile:""
+          },
+          {
+            id:"C18",
+            fullName:"Pranav Raj",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Public Relation",
+        members:[
+          {
+            id:"C12",
+            fullName:"Naman Rusia",
+            mdxFile:""
+          },
+          {
+            id:"C13",
+            fullName:"Ujjval Chauhan",
+            mdxFile:""
+          },
+          {
+            id:"C14",
+            fullName:"Devansh Srivastava",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Photography Service",
+        members:[
+          {
+            id:"C15",
+            fullName:"Ayaan Jaiswal",
+            mdxFile:""
+          },
+          {
+            id:"C15",
+            fullName:"Shreyas Srivastava",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Social Media Services",
+        members:[
+          {
+            id:"C16",
+            fullName:"Aakanshi Garg",
+            mdxFile:""
+          },
+          {
+            id:"C17",
+            fullName:"Urvashi Bajpai",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Management Team Coordinator",
+        members:[
+          {
+            id:"C18",
+            fullName:"Prachi Chaudhary",
+            mdxFile:""
+          },
+          {
+            id:"C19",
+            fullName:"Dhruv Kumar jha",
+            mdxFile:""
+          }
+        ]
+      },
+      {
+        name:"Performing Arts Coordinator",
+        members:[
+          {
+            id:"C20",
+            fullName:"Nandini Mittal",
+            mdxFile:""
+          },
+          {
+            id:"C21",
+            fullName:"Samridh Srivastava",
+            mdxFile:""
+          }
+        ]
+      }
+    ]
+  }
   ]
