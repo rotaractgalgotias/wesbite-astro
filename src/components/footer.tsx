@@ -1,3 +1,4 @@
+import * as React from "react";
 const Footer = () => {
   return (
     <footer className="container mx-auto mt-5 rounded-lg bg-white px-4 py-3 md:my-8 md:bg-white md:px-8 md:shadow-lg">
@@ -21,7 +22,7 @@ const Footer = () => {
             <ul className="mt-8 flex gap-6">
               <li>
                 <a
-                  href="/"
+                  href="https://www.facebook.com/RotaractGEI"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75"
@@ -69,7 +70,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="/"
+                  href="https://twitter.com/rotaractGEI"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75"
@@ -96,7 +97,7 @@ const Footer = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="https://www.rotary.org/en/get-involved/rotaract-clubs"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Rotaract
@@ -105,7 +106,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href="https://www.rotary.org/en"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Rotary
@@ -114,16 +115,16 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href="https://www.rotaractdistrict3011.org/"
                     className="text-gray-700 transition hover:opacity-75"
                   >
-                    Rotarct District
+                    Rotarct District 3011
                   </a>
                 </li>
 
                 <li>
                   <a
-                    href="#"
+                    href={"/team/past"}
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Club History
@@ -132,7 +133,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href={"/events"}
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Our Events
@@ -146,7 +147,7 @@ const Footer = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href={"/team"}
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Team Page
@@ -155,7 +156,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href={"/team/#council"}
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Board Council
@@ -164,7 +165,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href={"/team/#directors"}
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Board of Directors
@@ -173,7 +174,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href={"/team/#coordinators"}
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Coordinators
@@ -182,10 +183,10 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href={"/team/past"}
                     className="text-gray-700 transition hover:opacity-75"
                   >
-                    Archived Teams
+                    Past Teams
                   </a>
                 </li>
               </ul>
