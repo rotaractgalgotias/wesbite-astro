@@ -2,7 +2,7 @@
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 const events = await getCollection("events");
-
+events.sort((a,b)=>(new Date(b.data.date))-(new Date(a.data.date)))
 ---
 
 <Layout>
