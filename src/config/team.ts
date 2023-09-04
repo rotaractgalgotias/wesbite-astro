@@ -43,7 +43,7 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"01",
-            fullName:"Aditya Ojha",
+            fullName:"Aditya Kumar Ojha",
             mdxFile:""
           }
         ]
@@ -174,7 +174,7 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D18",
-            fullName:"Areeb Ur Rub",
+            fullName:"Areeb ur Rub",
             mdxFile:""
           },
           {
@@ -194,7 +194,7 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D13",
-            fullName:"Anurag Agrahari",
+            fullName:"Anurag Kumar Agrahari",
             mdxFile:""
           },
           {
@@ -260,7 +260,7 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D21",
-            fullName:"Bhavya",
+            fullName:"Bhavya Sinha",
             mdxFile:""
           },
           
@@ -312,7 +312,7 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"C06",
-            fullName:"Kritika Sharma",
+            fullName:"Kritika Singh",
             mdxFile:""
           },
           {
@@ -382,7 +382,7 @@ export const TeamData:Team[] = [
           },
           {
             id:"C13",
-            fullName:"Ujjval Chauhan",
+            fullName:"Ujjval Rajput",
             mdxFile:""
           },
           {
@@ -432,7 +432,7 @@ export const TeamData:Team[] = [
           },
           {
             id:"C19",
-            fullName:"Dhruv Kumar jha",
+            fullName:"Dhruv Kumar Jha",
             mdxFile:""
           }
         ]
@@ -447,7 +447,7 @@ export const TeamData:Team[] = [
           },
           {
             id:"C21",
-            fullName:"Samridh Srivastava",
+            fullName:"Samridh Kant Srivastava",
             mdxFile:""
           }
         ]

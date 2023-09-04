@@ -1,25 +1,120 @@
 ---
+import {Instagram, Twitter, Linkedin, MessageCircle, Hash, Cake} from 'lucide-astro'
+import {format} from 'date-fns';
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 export async function getStaticPaths() {
-  const events = await getCollection("team");
-  return events.map((event) => {
+  const team = await getCollection("team");
+  return team.map((member) => {
     return {
       params: {
-        slug: event.slug,
+        slug: member.slug,
       },
       props: {
-        event,
+        member,
       },
     };
   });
 }
 
-const {event} = Astro.props;
-const {Content} = await event.render()
+const {member} = Astro.props;
+
+const dateObj = new Date(member.data.dob);
+const DOB = {
+  day: format(dateObj, 'dd'),
+  month: format(dateObj, 'LLLL'),
+  year: format(dateObj, 'yyyy'),
+  dayOfWeek: format(dateObj, 'EEEE')
+}
+
+const {Content} = await member.render()
 ---
 <Layout>
-    <div class="prose lg:prose-xl mx-auto">
+    <div class="container mx-auto">
+        <div class="flex flex-row gap-2 items-center my-4 bg-gray-200 py-1 px-3 rounded-lg">
+            <a href="/" class="text-lg font-dmSans font-semibold">Home</a>
+            <span class="text-lg font-dmSans font-semibold">/</span>
+            <a href="/team" class="text-lg font-dmSans font-semibold">Team 2023-24</a>
+            <span class="text-lg font-dmSans font-semibold">/</span>
+            <span class="text-lg font-dmSans font-semibold">{member.data.name}</span>
+        </div>
+    </div>
+
+    <div class="container mx-auto">
+
+        <div class="mx-auto lg:w-[70vw] shadow rounded-lg overflow-clip w-full bg-white grid grid-cols-5 md:gap-5">
+            <div class="md:col-span-2 col-span-full">
+                <img src={member.data.photo} alt={member.data.name}
+                     class="w-full h-full object-cover border-2 rounded-l-lg"/>
+            </div>
+            <div class="md:col-span-3 col-span-full px-4 lg:py-14 md:py-8 py-4">
+                <div class="flex flex-col">
+                    <span class="lg:text-4xl text-3xl rounded-2xl font-outfit font-bold">{member.data.name}</span>
+                    <span class="lg:text-2xl text-xl rounded-2xl font-dmSans">{member.data.position}</span>
+                </div>
+                <hr class="my-2"/>
+                <div class="flex flex-row gap-2 flex-wrap my-2">
+                  {
+                    member.data.instagram &&
+                          <a href=`https://instagram.com/${member.data.instagram}` target="_blank"
+                             class="flex flex-row gap-2 p-3 items-center justify-center bg-gray-50 hover:bg-gray-100 rounded-lg"
+                             title="Instagram">
+                              <Instagram/>
+                              <span>{member.data.instagram}</span>
+                          </a>
+                  }
+                  {
+                    member.data.twitter &&
+                          <a href=`https://twitter.com/${member.data.twitter}` target="_blank"
+                             class="flex flex-row gap-2 p-3 items-center justify-center bg-gray-50 hover:bg-gray-100 rounded-lg"
+                             title="Twitter">
+                              <Twitter/>
+                              <span>{member.data.twitter}</span>
+                          </a>
+                  }
+                  {
+                    member.data.linkedin &&
+                          <a href=`https://www.linkedin.com/in/${member.data.linkedin}` target="_blank"
+                             class="flex flex-row gap-2 p-3 items-center justify-center bg-gray-50 hover:bg-gray-100 rounded-lg"
+                             title="Linked In">
+                              <Linkedin/>
+                          </a>
+                  }
+                  {
+                    member.data.whatsapp &&
+                          <a href=`https://wa.me/${member.data.whatsapp}` target="_blank"
+                             class="flex flex-row gap-2 p-3 items-center justify-center bg-gray-50 hover:bg-gray-100 rounded-lg"
+                             title="WhatsApp">
+                              <MessageCircle/>
+                              <span>{member.data.whatsapp}</span>
+                          </a>
+                  }
+
+                </div>
+                <hr class="my-2"/>
+                <div class="flex flex-col gap-2">
+                  {
+                    member.data.rid &&
+                          <div class="text-xl flex flex-row items-center gap-2">
+                              <Hash/>
+                              <span class="rounded-2xl font-dmSans">Rotary ID : </span>
+                              <span class="rounded-2xl font-dmSans font-semibold">{member.data.rid}</span>
+                          </div>
+                  }
+                  {
+                    member.data.dob &&
+                          <div class="text-xl flex flex-row items-center gap-2">
+                              <Cake/>
+                              <span class="rounded-2xl font-dmSans">Birthday : </span>
+                              <span class="rounded-2xl font-dmSans font-semibold">{DOB.day + " " + DOB.month}</span>
+                          </div>
+                  }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prose lg:prose-xl mx-auto mt-10">
+        <hr/>
         <Content/>
     </div>
 </Layout>

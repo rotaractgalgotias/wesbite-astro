@@ -1,25 +1,32 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const eventCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
     date: z.date(),
     image: z.string().optional(),
-    images: z.string().optional()
-  })
+    images: z.string().optional(),
+  }),
 });
 
 const teamCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     name: z.string(),
-    photo: z.string()
-  })
+    photo: z.string(),
+    position: z.string(),
+    rid: z.string().optional(),
+    dob: z.date().optional(),
+    instagram: z.string().optional(),
+    twitter: z.string().optional(),
+    linkedin: z.string().optional(),
+    whatsapp: z.string().optional()
+  }),
 });
 
 export const collections = {
-  'events': eventCollection,
-  'team' : teamCollection
+  events: eventCollection,
+  team: teamCollection,
 };

@@ -2,7 +2,8 @@ import { TeamData } from "../config/team";
 
 const TeamMemberComponent = ({ member, subGroupName }) => {
   return (
-    <div
+    <a
+      href={'/team/' + member.fullName.toLowerCase().replace(/ /g, '-')}
       key={member.id}
       className={
         "col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 xl:col-span-1"
@@ -19,7 +20,7 @@ const TeamMemberComponent = ({ member, subGroupName }) => {
         </span>
         <span className={"font-dmSans text-xs"}>{subGroupName}</span>
       </div>
-    </div>
+    </a>
   );
 };
 
