@@ -30,7 +30,11 @@ const DOB = {
 
 const {Content} = await member.render()
 ---
-<Layout>
+<Layout
+  title = {`${member.data.name} | ${member.data.position} | Team 2023-24 | Rotary Galgotias`}
+  description = {`Rtr. ${member.data.name} is the ${member.data.position} of the Rotary Club of Galgotias Educational Institutions for the year 2023-24.`}
+  image = {"https://2023-24.rotaractgalgotias.org"+member.data.photo}
+>
     <div class="container mx-auto">
         <div class="flex flex-row gap-2 items-center my-4 bg-gray-200 py-1 px-3 rounded-lg">
             <a href="/" class="text-lg font-dmSans font-semibold">Home</a>
