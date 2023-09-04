@@ -61,6 +61,7 @@ const { title, description, ogImage } = Astro.props;
       content={ogImage}
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
   </head>
   <body class={`bg-gray-100 px-5 md:px-auto`}>
     <Navbar client:only="react" />
