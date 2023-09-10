@@ -3,24 +3,14 @@ import Gallery from "react-photo-gallery";
 
 const EventGallery = ({ images, event }) => {
 
-
-
-  async function getPhotosWithAspectRatio(files) {
-    const images = files.map(file => {
+  async function getPhotosWithAspectRatio(files: any[]) {
+    const images = files.map((file) => {
       return new Promise((resolve) => {
-        const img = new Image();
-        img.src = file;
-
-        img.onload = () => {
-          const width = img.naturalWidth;
-          const height = img.naturalHeight;
-
           resolve({
-            src: file,
-            width: width / height,
+            src: file.src,
+            width: file.width / file.height,
             height: 1,
           });
-        };
       });
     });
 
@@ -40,6 +30,10 @@ const EventGallery = ({ images, event }) => {
       setPhotos(res);
     });
   }, []);
+
+  useEffect(() => {
+    console.log(photos);
+  }, [photos]);
 
   // @ts-ignore
   return (

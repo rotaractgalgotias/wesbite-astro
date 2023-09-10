@@ -20,7 +20,8 @@ import format from 'date-fns/format/index.js';
                 </p>
             </div>
             {
-              events.map((event)=>(
+              events
+                .map((event)=>(
                 <a href=`/events/${event.slug}`
                    class="cursor-pointer group col-span-12 lg:col-span-4 rounded flex flex-col justify-between overflow-hidden shadow-lg hover:border-blue-600 border-transparent border-2 transition duration-200">
                     <div>
@@ -40,7 +41,19 @@ import format from 'date-fns/format/index.js';
               ))
             }
 
-
-        </div>
+            </div>
+            <div class="w-full bg-white p-5 container shadow-lg">
+                <div class="w-full flex flex-col justify-center items-center gap-2">
+                    <h1 class="font-outfit text-2xl font-extrabold text-slate-800 lg:text-6xl">
+                        View Past Tenure Events
+                    </h1>
+                    <p class="font-dmSans text-sm text-slate-600 md:text-lg text-justify">
+                        We have been organizing events since 2010. Check out our available past tenure events.
+                    </p>
+                    <a target="_blank" href="https://2022-23.rotaractgalgotias.org/events" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        2022-23 Events
+                    </a>
+                </div>
+            </div>
     </main>
 </Layout>
