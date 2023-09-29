@@ -85,15 +85,6 @@ const {Content} = await member.render()
                               <Linkedin/>
                           </a>
                   }
-                  {
-                    member.data.whatsapp &&
-                          <a href=`https://wa.me/${member.data.whatsapp}` target="_blank"
-                             class="flex flex-row gap-2 p-3 items-center justify-center bg-gray-50 hover:bg-gray-100 rounded-lg"
-                             title="WhatsApp">
-                              <MessageCircle/>
-                              <span>{member.data.whatsapp}</span>
-                          </a>
-                  }
 
                 </div>
                 <hr class="my-2"/>
