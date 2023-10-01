@@ -38,7 +38,7 @@ const {Content} = await event.render()
 //     });
 // });
 
-const images = await import.meta.glob('/src/assets/events/*/**',{eager: true});
+const images = await import.meta.glob('/src/assets/events/*/**.jpg',{eager: true});
 const photos = Object.keys(images).map( (path) => {
   const regex = /\/events\/([^/]+)\//;
   const match = path.match(regex);
