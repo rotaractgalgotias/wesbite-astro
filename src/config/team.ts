@@ -198,11 +198,6 @@ export const TeamData:Team[] = [
             mdxFile:""
           },
           {
-            id:"D14",
-            fullName:"Thakur Manu Chauhan",
-            mdxFile:""
-          },
-          {
             id:"D15",
             fullName:"Srishti Yadav",
             mdxFile:""
@@ -230,11 +225,6 @@ export const TeamData:Team[] = [
           {
             id:"D21",
             fullName:"Isha Srivastava",
-            mdxFile:""
-          },
-          {
-            id:"D12",
-            fullName:"Tanay Mishra",
             mdxFile:""
           },
         ]
