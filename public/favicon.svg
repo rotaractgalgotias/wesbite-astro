@@ -6,7 +6,7 @@
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
-        fill-rule: evenodd;
+        fillRule: evenodd;
       }
 
       .cls-2 {

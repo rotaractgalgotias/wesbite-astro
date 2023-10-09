@@ -1,0 +1,398 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import {HeroSlider} from "../components/hero-slider";
+import {RiArrowRightSLine} from "react-icons/ri";
+
+const sliderImages = [
+  {
+    image: "/cover/chav.JPG",
+    id: "1",
+    alt: "",
+  },
+  {
+    image: "/cover/fellowship.jpg",
+    id: "2",
+    alt: "",
+  },
+  {
+    image: "/cover/fight-hunger.JPG",
+    id: "3",
+    alt: "",
+  },
+  {
+    image: "/cover/flood-relief.JPG",
+    id: "4",
+    alt: "",
+  },
+];
+
+const eventsImages = [
+  {
+    image: "/cover/sapno-ki-pathshala.jpg",
+    id: "1",
+    alt: "",
+  },
+  {
+    image: "/cover/seva-sahyog.JPG",
+    id: "2",
+    alt: "",
+  },
+  {
+    image: "/cover/swaraj.jpg",
+    id: "3",
+    alt: "",
+  },
+];
+---
+
+<Layout
+        title="JOIN - Rotaract Galgotias | A community of young leaders, giving back to the community."
+        description="Rotaract Club of Galgotias is a community of young leaders, giving back to the community. We are a part of Rotary International, a global network of 1.2 million neighbors, friends, leaders, and problem-solvers who see a world where people unite and take action to create lasting change – across the globe, in our communities, and in ourselves."
+        ogImage="/og.png"
+>
+    <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
+        <div class={"container grid grid-cols-12 gap-5"}>
+            <div class={"lg:hidden col-span-full block"}>
+                <!--<HeroSlider sliderImages={sliderImages} client:only="react" />-->
+                <iframe class="w-full h-72 rounded-lg border-2 border-gray-300 shadow"
+                        src="https://www.youtube.com/embed/17tnMlHMcYo"
+                        title="&quot;Rotaract Club of Galgotias Educational Institutions: Impacting Lives Through Service&quot;"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+            <div class={"col-span-12 flex flex-col gap-4 lg:gap-8 lg:col-span-6 xl:pr-5"}>
+                <h1
+                        class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-6xl"}
+                >
+                    Your Gateway to Impactful Leadership
+                </h1>
+                <p class={"font-dmSans text-xl/relaxed text-slate-600 md:text-lg md:w-3/4"}>
+                    Embark on a journey of leadership, service, and personal growth with the Rotaract Club at Galgotias
+                    Educational Institutions. At Rotaract, we believe in making a difference - <i>not someday, but
+                    today</i>.
+                </p>
+                <div class={"flex gap-4"}>
+                    <button
+                            class={"rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg"}
+                    >
+                        <a href="https://forms.gle/aEqDZZPoyGtcx3316">
+                            Get Involved
+                        </a>
+                    </button>
+                    <button
+                            class={"rounded-md bg-slate-100 px-4 py-2 font-dmSans text-lg font-bold text-slate-800"}
+                    ><a href={"#"}>
+                        Join WhatsApp
+                    </a>
+                    </button>
+                </div>
+            </div>
+            <div class={"col-span-12 hidden lg:col-span-6 lg:block"}>
+                <!--<HeroSlider sliderImages={sliderImages} client:only="react" />-->
+                <iframe class="w-full h-full rounded-lg border-2 border-gray-300 shadow"
+                        src="https://www.youtube.com/embed/17tnMlHMcYo"
+                        title="&quot;Rotaract Club of Galgotias Educational Institutions: Impacting Lives Through Service&quot;"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class={"container flex flex-col gap-8 my-5"}>
+            <h1 class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-5xl"}>
+                All Domains
+            </h1>
+            <div class={"container grid grid-cols-12 gap-5"}>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/community.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Community Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Engage in vital community service projects focusing on education, healthcare, and social welfare.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/club.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Club Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Contribute to planning events, meetings, and member activities. Develop leadership skills within the club.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/vocational.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Vocational Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Enhance vocational skills through workshops and seminars. Gain insights related to your future profession.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/literary.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Literary Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Participate in writing contests, poetry readings, and book discussions. Explore and share your passion for words.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/international.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            International Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Engage in global projects, cultural exchanges, and collaborations with Rotaract clubs worldwide. Expand your horizons.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/multimedia.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Multimedia Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Contribute to graphic design, video production, and digital media projects. Showcase creativity and technical skills.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/public-relations.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Public Relations Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Shape the club's public image through communication strategies and social media management.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/photography.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Photography Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Capture moments at events and community projects. Develop photography skills and visually enhance the club's narrative.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/think.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Social Media
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Manage online presence, create content, and run campaigns. Connect with a wider audience.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/management.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Management Services
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Contribute to event planning and execution. Hone organizational and leadership skills.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
+                    <div class={"col-span-full md:col-span-1"}>
+                        <img
+                          height={32}
+                          width={32}
+                          src={"/icons/domain/performance-art.png"}
+                          alt={"Think"}
+                          class={"md:mx-auto"}
+                        />
+                    </div>
+                    <div class={"col-span-full md:col-span-4"}>
+                        <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                            Performing Arts
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Showcase talents in music, dance, theater, and more. Contribute creatively to cultural events.
+                        </p>
+                        <!--<a-->
+                        <!--  href={"#"}-->
+                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
+                        <!--&gt;-->
+                        <!--    <span class="pb-1">Know More</span>-->
+                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</Layout>

@@ -53,16 +53,17 @@ const eventsImages = [
 >
   <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
     <div class={"container grid grid-cols-12 gap-5"}>
-      <div class={"col-span-12 block lg:col-span-6 lg:hidden"}>
-        <HeroSlider sliderImages={sliderImages} client:only="react" />
+      <div class={"lg:hidden col-span-full block"}>
+          <!--<HeroSlider sliderImages={sliderImages} client:only="react" />-->
+          <iframe class="w-full h-72 rounded-lg border-2 border-gray-300 shadow" src="https://www.youtube.com/embed/17tnMlHMcYo" title="&quot;Rotaract Club of Galgotias Educational Institutions: Impacting Lives Through Service&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <div class={"col-span-12 flex flex-col gap-4 lg:col-span-6"}>
+      <div class={"col-span-12 flex flex-col gap-4 lg:gap-8 lg:col-span-6 xl:pr-5"}>
         <h1
-          class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
+          class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-6xl"}
         >
           Committed to making a positive impact in our community.
         </h1>
-        <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
+        <p class={"font-dmSans text-xl/relaxed text-slate-600 md:text-lg md:w-3/4"}>
           At Rotaract Galgotias, we function as a service-oriented organization
           that strives to create a better world through volunteerism, community
           service, and professional development.
@@ -140,23 +141,21 @@ const eventsImages = [
     >
       <div class={"col-span-12 lg:col-span-6"}>
         <img
-          height={900}
-          width={600}
           title={"Rotaract Galgotias"}
           alt={"Rotaract Galgotias"}
           src={"/about_image.jpg"}
-          class={"h-full w-full rounded-lg object-cover"}
+          class={"h-full w-auto rounded-lg object-cover"}
         />
       </div>
       <div
-        class={"col-span-12 flex flex-col items-start justify-between gap-3 lg:col-span-6"}
+        class={"col-span-12 flex flex-col items-start gap-3 lg:col-span-6"}
       >
         <h1
           class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-5xl"}
         >
           About Us
         </h1>
-        <p class={"text-justify font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
+        <p class={"text-justify font-dmSans text-xl/relaxed text-slate-600 md:text-lg text-justify"}>
           We are the Rotaract Club of Galgotias Educational Institutions,
           dedicated to creating positive change in our community through
           volunteerism, community service, and professional development. Join us

@@ -24,7 +24,7 @@ export function Navbar(props: Props) {
   return (
     <nav
       className={
-        "container mx-auto mt-5 flex w-[95vw] flex-row items-center justify-between rounded-lg px-4 py-3 md:my-8 md:bg-white md:px-8 md:shadow-lg"
+        "container mx-auto mt-5 flex w-full flex-row items-center justify-between rounded-lg px-0 py-3 md:my-8 md:bg-white md:px-8 md:shadow-lg"
       }
     >
       <a href={'/'}>
@@ -43,8 +43,8 @@ export function Navbar(props: Props) {
               </span>
             </div>
             <div className={"flex flex-col md:hidden"}>
-              <span className={"h-6 font-outfit text-xl font-bold"}>Rotaract</span>
-              <span className={"font-outfit text-xs font-medium"}>Galgotias</span>
+              <span className={"h-6 font-outfit text-xl font-bold"}>Rotaract Club</span>
+              <span className={"font-outfit text-xs font-medium"}>Galgotias Educational Institutions</span>
             </div>
           </div>
       </a>
