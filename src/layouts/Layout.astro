@@ -6,6 +6,7 @@ import "../global.css";
 
 import { Navbar } from "../components/navbar";
 import Footer from "../components/footer";
+import * as React from "react";
 
 export interface Props {
   title: string;
@@ -63,9 +64,17 @@ const { title, description, ogImage } = Astro.props;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
   </head>
-  <body class={`bg-gray-100 px-5 md:px-auto`}>
-    <Navbar client:only="react" />
-    <slot />
-    <Footer />
+  <body class={`bg-gray-100`}>
+    <div class="w-full p-2 bg-gray-800 text-white md:text-center text-left flex flex-row items-center justify-center text-sm md:text-lg">
+        Visit our detailed page for Freshers
+        <a href="/join" class="ml-2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-md">
+            Know&nbsp;More
+        </a>
+    </div>
+    <div class={`px-5 md:px-auto`}>
+      <Navbar client:only="react" />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>

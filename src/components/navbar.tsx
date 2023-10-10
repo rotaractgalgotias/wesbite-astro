@@ -1,6 +1,7 @@
 // @flow
 import * as React from "react";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
+import {SiInstagram, SiTwitter, SiWhatsapp} from "react-icons/si";
 
 type Props = {};
 
@@ -24,7 +25,7 @@ export function Navbar(props: Props) {
   return (
     <nav
       className={
-        "container mx-auto mt-5 flex w-full flex-row items-center justify-between rounded-lg px-0 py-3 md:my-8 md:bg-white md:px-8 md:shadow-lg"
+        "container mx-auto mt-5 flex w-full flex-row items-center justify-between rounded-lg px-0 py-3 md:my-5 md:bg-white md:px-8 md:border-2 md:border-gray-200"
       }
     >
       <a href={'/'}>
@@ -55,7 +56,7 @@ export function Navbar(props: Props) {
 
       <div
         className={
-          "hidden flex-row items-center justify-between gap-10 font-dmSans text-xl font-medium md:flex"
+          "hidden flex-row items-center justify-between gap-6 font-dmSans text-lg font-medium md:flex"
         }
       >
         <a href={"/"}>Home</a>
