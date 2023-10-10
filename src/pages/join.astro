@@ -1,8 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import {getCollection} from "astro:content";
+let events = await getCollection("events");
+events.sort((a,b)=>(new Date(b.data.date))-(new Date(a.data.date)))
+//remove events with slug is in the remove array
+const remove =['good-touch-bad-touch','nanhe-parinde','margdarshak','bonding-bash','avtaran','digital-detox','plantation-drive','seva-sahyog']
+events = events.filter((event)=>!remove.includes(event.slug))
+
+
+import format from 'date-fns/format/index.js';
 
 import {HeroSlider} from "../components/hero-slider";
 import {RiArrowRightSLine} from "react-icons/ri";
+import format from "date-fns/format/index";
 
 
 const eventsImages = [
@@ -102,17 +112,16 @@ const eventsImages = [
                     today</i>.
                 </p>
                 <div class={"flex gap-4"}>
-                    <button
-                            class={"rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg"}
-                    >
-                        <a href="https://forms.gle/aEqDZZPoyGtcx3316">
+                    <button class="relative rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg group">
+                        <a href="https://forms.gle/LEkV2J7yYpKyChyS8">
                             Get Involved
                         </a>
                     </button>
+
                     <button
                             class={"rounded-md bg-slate-100 px-4 py-2 font-dmSans text-lg font-bold text-slate-800"}
-                    ><a href={"#"}>
-                        Join WhatsApp
+                    ><a href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
+                        Join WhatsApp Group
                     </a>
                     </button>
                 </div>
@@ -215,6 +224,42 @@ const eventsImages = [
                     </div>
 
                 </div>
+            </div>
+        </div>
+
+
+        <div class={"container flex flex-col gap-8 my-5"}>
+            <h1 class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-5xl"}>
+                Events
+            </h1>
+            <div class={"container grid grid-cols-12 gap-8"}>
+
+                {
+                    events
+                      .map((event)=>(
+                        <a href=`/events/${event.slug}`
+                           class="cursor-pointer group col-span-12 lg:col-span-4 rounded flex flex-col justify-between overflow-hidden shadow-lg hover:border-blue-600 border-transparent border-2 transition duration-200">
+                            <div>
+                                <img class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                                     src={event.data.image} alt={event.data.title}>
+                                <div class="px-6 py-4">
+                                    <div class="font-bold text-xl mb-2">{event.data.title}</div>
+                                    <div class="text-gray-700 text-justify"> {event.data.description} </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-center items-center px-6 transition duration-200 ease-in-out translate-y-10 group-hover:-translate-y-0 w-full bg-blue-600 h-10">
+                              <span class="text-white font-bold text-center">
+                                  {format(event.data.date, 'dd MMM, yyyy')}
+                              </span>
+                            </div>
+                        </a>
+                      ))
+                }
+            </div>
+            <div class="flex flex-row w-full items-center justify-center">
+                <a href="/events" class="relative rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg group">
+                    View All Events
+                </a>
             </div>
         </div>
 
@@ -520,7 +565,6 @@ const eventsImages = [
 
             </div>
         </div>
-
 
     </main>
 </Layout>
