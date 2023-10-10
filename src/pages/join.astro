@@ -4,43 +4,71 @@ import Layout from "../layouts/Layout.astro";
 import {HeroSlider} from "../components/hero-slider";
 import {RiArrowRightSLine} from "react-icons/ri";
 
-const sliderImages = [
-  {
-    image: "/cover/chav.JPG",
-    id: "1",
-    alt: "",
-  },
-  {
-    image: "/cover/fellowship.jpg",
-    id: "2",
-    alt: "",
-  },
-  {
-    image: "/cover/fight-hunger.JPG",
-    id: "3",
-    alt: "",
-  },
-  {
-    image: "/cover/flood-relief.JPG",
-    id: "4",
-    alt: "",
-  },
-];
 
 const eventsImages = [
   {
-    image: "/cover/sapno-ki-pathshala.jpg",
+    image: "/benefits/benefit (1).JPG",
     id: "1",
     alt: "",
   },
   {
-    image: "/cover/seva-sahyog.JPG",
+    image: "/benefits/benefit (2).JPG",
     id: "2",
     alt: "",
   },
   {
-    image: "/cover/swaraj.jpg",
+    image: "/benefits/benefit (3).JPG",
     id: "3",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (4).JPG",
+    id: "4",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (5).JPG",
+    id: "5",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (6).jpg",
+    id: "6",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (7).jpg",
+    id: "7",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (8).jpg",
+    id: "8",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (9).jpg",
+    id: "9",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (10).jpg",
+    id: "10",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (11).jpg",
+    id: "11",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (12).JPG",
+    id: "12",
+    alt: "",
+  },
+  {
+    image: "/benefits/benefit (13).JPG",
+    id: "13",
     alt: "",
   },
 ];
@@ -68,7 +96,7 @@ const eventsImages = [
                 >
                     Your Gateway to Impactful Leadership
                 </h1>
-                <p class={"font-dmSans text-xl/relaxed text-slate-600 md:text-lg md:w-3/4"}>
+                <p class={"font-dmSans text-sm/relaxed text-slate-600 md:text-lg/relaxed md:w-3/4"}>
                     Embark on a journey of leadership, service, and personal growth with the Rotaract Club at Galgotias
                     Educational Institutions. At Rotaract, we believe in making a difference - <i>not someday, but
                     today</i>.
@@ -99,6 +127,97 @@ const eventsImages = [
                         allowfullscreen></iframe>
             </div>
         </div>
+
+
+        <div class={"container flex flex-col gap-8 my-5"}>
+            <h1 class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-5xl"}>
+                Your Benefits
+            </h1>
+            <div class={"container grid grid-cols-12 gap-5"}>
+                <div class={"col-span-12 lg:col-span-6"}>
+                    <HeroSlider sliderImages={eventsImages} client:only="react"/>
+                </div>
+                <div class="col-span-12 lg:col-span-5 flex flex-col gap-3">
+                    <div>
+                        <h1 class={"flex flex-row gap-2 items-center font-dmSans text-lg font-bold text-slate-800"}>
+                            <svg class="w-5 h-5 fill-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+                            </svg>
+                            Personal Development
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Joining Rotaract provides a unique platform for personal growth. Engage in workshops and
+                            seminars that <strong>enhance your leadership, communication, and organizational
+                            skills</strong>. Build confidence, empathy, and resilience through hands-on projects,
+                            preparing you for future challenges in both your professional and personal life.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h1 class={"flex flex-row gap-2 items-center font-dmSans text-lg font-bold text-slate-800"}>
+                            <svg class="w-5 h-5 fill-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+                            </svg>
+                            Community Impact
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Rotaract offers the opportunity to <strong>make a real difference in the community</strong>.
+                            Participate in impactful social service projects, ranging from education and healthcare
+                            initiatives to environmental conservation efforts. Experience the joy of giving back,
+                            knowing that your contributions directly improve lives and create positive change.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h1 class={"flex flex-row gap-2 items-center font-dmSans text-lg font-bold text-slate-800"}>
+                            <svg class="w-5 h-5 fill-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+                            </svg>
+                            Global Network and Collaboration
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            As a Rotaract member, <strong>you become part of an extensive international network</strong>.
+                            Connect with like-minded individuals not only locally but also globally. Collaborate on
+                            projects with Rotaract clubs from different countries, fostering cultural understanding and
+                            creating a broader perspective on global issues.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h1 class={"flex flex-row gap-2 items-center font-dmSans text-lg font-bold text-slate-800"}>
+                            <svg class="w-5 h-5 fill-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+                            </svg>
+                            Professional Networking
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Rotaract provides a platform for professional networking and mentorship. Interact with
+                            professionals from diverse fields who are often guest speakers at club events. Gain insights
+                            into various careers, learn about industry trends, and <strong>create valuable connections
+                            that could potentially shape your future career path</strong>.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h1 class={"flex flex-row gap-2 items-center font-dmSans text-lg font-bold text-slate-800"}>
+                            <svg class="w-5 h-5 fill-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+                            </svg>
+                            Recognition and Certificates
+                        </h1>
+                        <p class={"font-dmSans text-sm text-slate-600"}>
+                            Your involvement in Rotaract is recognized and celebrated. Receive certificates
+                            acknowledging your active participation and contributions to club activities. These
+                            certificates serve as a testament to your dedication to community service and leadership,
+                            <strong>enhancing your resume and showcasing your commitment to social
+                                responsibility</strong>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <div class={"container flex flex-col gap-8 my-5"}>
             <h1 class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-5xl"}>
                 All Domains
@@ -119,7 +238,8 @@ const eventsImages = [
                             Community Services
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Engage in vital community service projects focusing on education, healthcare, and social welfare.
+                            Engage in vital community service projects focusing on education, healthcare, and social
+                            welfare.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -133,11 +253,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/club.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/club.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -145,7 +265,8 @@ const eventsImages = [
                             Club Services
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Contribute to planning events, meetings, and member activities. Develop leadership skills within the club.
+                            Contribute to planning events, meetings, and member activities. Develop leadership skills
+                            within the club.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -159,11 +280,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/vocational.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/vocational.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -171,7 +292,8 @@ const eventsImages = [
                             Vocational Services
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Enhance vocational skills through workshops and seminars. Gain insights related to your future profession.
+                            Enhance vocational skills through workshops and seminars. Gain insights related to your
+                            future profession.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -185,11 +307,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/literary.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/literary.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -197,7 +319,8 @@ const eventsImages = [
                             Literary Services
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Participate in writing contests, poetry readings, and book discussions. Explore and share your passion for words.
+                            Participate in writing contests, poetry readings, and book discussions. Explore and share
+                            your passion for words.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -211,11 +334,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/international.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/international.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -223,7 +346,8 @@ const eventsImages = [
                             International Services
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Engage in global projects, cultural exchanges, and collaborations with Rotaract clubs worldwide. Expand your horizons.
+                            Engage in global projects, cultural exchanges, and collaborations with Rotaract clubs
+                            worldwide. Expand your horizons.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -237,11 +361,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/multimedia.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/multimedia.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -249,7 +373,8 @@ const eventsImages = [
                             Multimedia Services
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Contribute to graphic design, video production, and digital media projects. Showcase creativity and technical skills.
+                            Contribute to graphic design, video production, and digital media projects. Showcase
+                            creativity and technical skills.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -263,11 +388,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/public-relations.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/public-relations.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -289,11 +414,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/photography.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/photography.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -301,7 +426,8 @@ const eventsImages = [
                             Photography Services
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Capture moments at events and community projects. Develop photography skills and visually enhance the club's narrative.
+                            Capture moments at events and community projects. Develop photography skills and visually
+                            enhance the club's narrative.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -315,11 +441,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/think.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/social-media.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -341,11 +467,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/management.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/management.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -367,11 +493,11 @@ const eventsImages = [
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
                         <img
-                          height={32}
-                          width={32}
-                          src={"/icons/domain/performance-art.png"}
-                          alt={"Think"}
-                          class={"md:mx-auto"}
+                                height={32}
+                                width={32}
+                                src={"/icons/domain/performance-art.png"}
+                                alt={"Think"}
+                                class={"md:mx-auto"}
                         />
                     </div>
                     <div class={"col-span-full md:col-span-4"}>
@@ -379,7 +505,8 @@ const eventsImages = [
                             Performing Arts
                         </h1>
                         <p class={"font-dmSans text-sm text-slate-600"}>
-                            Showcase talents in music, dance, theater, and more. Contribute creatively to cultural events.
+                            Showcase talents in music, dance, theater, and more. Contribute creatively to cultural
+                            events.
                         </p>
                         <!--<a-->
                         <!--  href={"#"}-->
@@ -393,6 +520,7 @@ const eventsImages = [
 
             </div>
         </div>
+
 
     </main>
 </Layout>
