@@ -83,6 +83,8 @@ export function Navbar(props: Props) {
               <a href={"/about"}>About</a>
               <a href={"/team"}>Team</a>
               <a href={"/events"}>Events</a>
+              <a href={"/team/past"}>Past Teams</a>
+              <a href={"/join"}>Interested to Join?</a>
             </div>
           </div>
         </div>
