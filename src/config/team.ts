@@ -78,6 +78,16 @@ export const TeamData:Team[] = [
           }
         ]
       },
+      {
+        name:"Aid-to-President",
+        members:[
+          {
+            id:"01",
+            fullName:"Aadarsh Rai",
+            mdxFile:""
+          }
+        ]
+      },
     ]
   },
   {
@@ -200,6 +210,11 @@ export const TeamData:Team[] = [
           {
             id:"D15",
             fullName:"Srishti Yadav",
+            mdxFile:""
+          },
+          {
+            id:"D15",
+            fullName:"Shivansh Johari",
             mdxFile:""
           }
         ]
