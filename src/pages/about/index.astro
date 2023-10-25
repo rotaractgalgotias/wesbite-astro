@@ -1,0 +1,149 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {HeroSlider} from "../../components/hero-slider";
+import {RiArrowRightSLine} from "react-icons/ri";
+
+const pageContent = [
+    {
+        Label: "View All Events",
+        Description: "We organize a variety of events throughout the year. Check out our calendar to see what's coming up next./",
+    }
+
+]
+
+---
+
+<Layout
+        title="About - RcGEI | Rotaract Galgotias Website"
+        description="At Rotaract Galgotias, we function as a service-oriented organization that strives to create a better world through volunteerism, community service, and professional development. We are a part of the global network of Rotaract clubs sponsored by Rotary International, which gives us access to a wealth of resources and opportunities for growth."
+        ogImage="/og.png"
+>
+    <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
+        <div class={"container grid grid-cols-12 gap-5"}>
+            <div class={"col-span-12 flex flex-col gap-4 text-justify"}>
+                <h1
+                        class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
+                >
+                    About Us
+                </h1>
+                <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
+                    At Rotaract Galgotias, we function as a service-oriented organization
+                    that strives to create a better world through volunteerism, community
+                    service, and professional development. We are a part of the global
+                    network of Rotaract clubs sponsored by Rotary International, which
+                    gives us access to a wealth of resources and opportunities for growth.
+                </p>
+            </div>
+            <div class={"col-span-12 flex flex-col gap-4 text-justify"}>
+                <h2
+                        class={"font-outfit text-3xl font-bold text-slate-800 lg:text-5xl "}
+                >
+                    Parent Club
+                </h2>
+                <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
+                    The Rotary Club of Delhi SouthEnd proudly serves as the Parent Club of the Rotaract Club of Galgotias Educational Institutions. Through this partnership, we nurture and support the young leaders of the Rotaract Club, empowering them to create a positive impact in their community and beyond. Together, we work hand in hand to foster a spirit of service, fellowship, and social responsibility, making a meaningful difference in the lives of those we touch. Through collaborative efforts and shared values, we aim to build a better future and inspire a new generation of compassionate change-makers.
+                </p>
+            </div>
+            <div class={"col-span-12 flex flex-col gap-4"}>
+                <h2
+                        class={"font-outfit text-2xl font-semibold text-slate-800 lg:text-4xl"}
+                >
+                    Page Contents
+                </h2>
+                <div class="w-full grid grid-cols-12 gap-2 text-justify">
+
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3 "}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Introduction
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                Welcome to the Rotaract Club of Galgotias Educational Institutions - a dynamic community service organization affiliated with Rotary International.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3"}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Our Mission
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                We are committed to fostering leadership, promoting community service, and cultivating professional growth among the youth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3"}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Our History
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                Learn about our club's journey since its establishment, including milestones and notable achievements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3"}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Meet Our Leadership
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                Get to know our dedicated board members and committee chairs who drive our club's initiatives.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3"}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Our Projects
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                Explore the range of service projects, fundraisers, and community outreach initiatives we undertake to make a positive difference.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3"}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Partnerships
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                Discover our collaborations with other organizations to amplify our impact and achieve shared goals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3"}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Impact Stories
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                Read inspiring stories and testimonials showcasing the tangible impact we've made in the community.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class={"col-span-12 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 p-4 hover:border-slate-400 md:col-span-6 lg:col-span-3"}>
+                        <div class={"col-span-full"}>
+                            <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
+                                Events and Programs
+                            </h1>
+                            <p class={"font-dmSans text-sm text-slate-600"}>
+                                Stay updated on our regular meetings, guest speakers, workshops, seminars, and social activities.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+</Layout>

@@ -1,0 +1,32 @@
+---
+import {getCollection} from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const domains = await getCollection("domain");
+  return domains.map((domain) => {
+    return {
+      params: {
+        slug: domain.slug,
+      },
+      props: {
+        domain
+      },
+    };
+  });
+}
+
+const {domain} = Astro.props
+const {Content} = await domain.render()
+---
+
+<Layout
+  title={`${domain.data.title} - Rotaract Galgotias`}
+  description={domain.data.description}
+  ogImage={domain.data.image}
+>
+    <div class="prose lg:prose-xl mx-auto">
+        <Content/>
+
+    </div>
+</Layout>
