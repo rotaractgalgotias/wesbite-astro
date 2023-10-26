@@ -1,7 +1,7 @@
 ---
 import {getCollection} from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
-
+import Directors from '../../../components/directors.astro'
 export async function getStaticPaths() {
   const domains = await getCollection("domain");
   return domains.map((domain) => {
@@ -26,7 +26,8 @@ const {Content} = await domain.render()
   ogImage={domain.data.image}
 >
     <div class="prose lg:prose-xl mx-auto">
-        <Content/>
+        <Content components={{directors:Directors}}/>
 
     </div>
+    <Directors/>
 </Layout>
