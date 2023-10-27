@@ -26,7 +26,16 @@ const teamCollection = defineCollection({
   }),
 });
 
+const domainCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
 export const collections = {
   events: eventCollection,
   team: teamCollection,
+  domain: domainCollection,
 };
