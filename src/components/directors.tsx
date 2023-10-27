@@ -1,6 +1,6 @@
 const Directors = ({names}) => {
     return(
-        <div className="not-prose w-full grid grid-cols-3 gap-5">
+        <div className="not-prose w-full grid grid-cols-2 md:grid-cols-3 gap-5">
             {
                 names.map((name,index)=>(
                     <a href={`/team/${name.toLowerCase().replace(/\s/g, '-')}`} target="__blank" id={index}>
