@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import format from "date-fns/format";
+import format from "date-fns/format/index.js";
 const { event } = Astro.props;
 
 // const coverImages = await import.meta.glob('/src/assets/cover/*.{jpg,png,webp}',{eager: true});
