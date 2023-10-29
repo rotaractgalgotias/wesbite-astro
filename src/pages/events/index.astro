@@ -2,11 +2,19 @@
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 const events = await getCollection("events");
-events.sort((a,b)=>(new Date(b.data.date))-(new Date(a.data.date)))
+events.sort((a, b) => (new Date(b.data.date)).getTime() - (new Date(a.data.date)).getTime())
 import format from 'date-fns/format/index.js';
+import { Image } from "astro:assets";
+
+import EventCard from "../../components/event-card.astro";
+
 ---
 
-<Layout>
+<Layout
+    title="Events - Rotaract Galgotias | Explore Our Events"
+    description="Check out the diverse range of events organized by Rotaract Club of Galgotias. Engage with our community and be part of the positive change we bring through our events. Join us in creating a better world together."
+    ogImage="/og.png"
+>
     <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
         <div class={"container grid grid-cols-12 gap-8"}>
             <div class={"col-span-full flex flex-col gap-4 justify-between"}>
@@ -20,25 +28,7 @@ import format from 'date-fns/format/index.js';
                 </p>
             </div>
             {
-              events
-                .map((event)=>(
-                <a href=`/events/${event.slug}`
-                   class="cursor-pointer group col-span-12 lg:col-span-4 rounded flex flex-col justify-between overflow-hidden shadow-lg hover:border-blue-600 border-transparent border-2 transition duration-200">
-                    <div>
-                        <img class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
-                             src={event.data.image} alt={event.data.title}>
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">{event.data.title}</div>
-                            <div class="text-gray-700 text-justify"> {event.data.description} </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row justify-center items-center px-6 transition duration-200 ease-in-out translate-y-10 group-hover:-translate-y-0 w-full bg-blue-600 h-10">
-                              <span class="text-white font-bold text-center">
-                                  {format(event.data.date, 'dd MMM, yyyy')}
-                              </span>
-                    </div>
-                </a>
-              ))
+              events.map((event)=><EventCard event={event}/>)
             }
 
             </div>

@@ -1,19 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import {getCollection} from "astro:content";
+import {HeroSlider} from "../components/hero-slider";
+import {RiArrowRightSLine} from "react-icons/ri";
+import format from 'date-fns/format/index.js';
+import { Image } from 'astro:assets';
+
 let events = await getCollection("events");
-events.sort((a,b)=>(new Date(b.data.date))-(new Date(a.data.date)))
+events.sort((a, b) => (new Date(b.data.date)).getTime() - (new Date(a.data.date)).getTime())
 //remove events with slug is in the remove array
 const remove =['good-touch-bad-touch','nanhe-parinde','margdarshak','bonding-bash','avtaran','digital-detox','plantation-drive','seva-sahyog']
 events = events.filter((event)=>!remove.includes(event.slug))
-
-
-import format from 'date-fns/format/index.js';
-
-import {HeroSlider} from "../components/hero-slider";
-import {RiArrowRightSLine} from "react-icons/ri";
-import format from "date-fns/format/index";
-
 
 const eventsImages = [
   {
@@ -240,8 +237,13 @@ const eventsImages = [
                         <a href=`/events/${event.slug}`
                            class="cursor-pointer group col-span-12 lg:col-span-4 rounded flex flex-col justify-between overflow-hidden shadow-lg hover:border-blue-600 border-transparent border-2 transition duration-200">
                             <div>
-                                <img class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
-                                     src={event.data.image} alt={event.data.title}>
+                                <Image
+                                    height="250"
+                                    width="500" 
+                                    class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                                    src={event.data.image}
+                                    alt={event.data.title}
+                                />
                                 <div class="px-6 py-4">
                                     <div class="font-bold text-xl mb-2">{event.data.title}</div>
                                     <div class="text-gray-700 text-justify"> {event.data.description} </div>
@@ -270,7 +272,7 @@ const eventsImages = [
             <div class={"container grid grid-cols-12 gap-5"}>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/community.png"}
@@ -286,18 +288,18 @@ const eventsImages = [
                             Engage in vital community service projects focusing on education, healthcare, and social
                             welfare.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                        href={"/about/domain/community-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" className={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/club.png"}
@@ -313,18 +315,18 @@ const eventsImages = [
                             Contribute to planning events, meetings, and member activities. Develop leadership skills
                             within the club.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                        href={"/about/domain/club-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/vocational.png"}
@@ -340,18 +342,18 @@ const eventsImages = [
                             Enhance vocational skills through workshops and seminars. Gain insights related to your
                             future profession.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/vocational-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" className={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/literary.png"}
@@ -367,18 +369,18 @@ const eventsImages = [
                             Participate in writing contests, poetry readings, and book discussions. Explore and share
                             your passion for words.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                        href={"/about/domain/literary-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/international.png"}
@@ -394,18 +396,18 @@ const eventsImages = [
                             Engage in global projects, cultural exchanges, and collaborations with Rotaract clubs
                             worldwide. Expand your horizons.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/international-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/multimedia.png"}
@@ -421,18 +423,18 @@ const eventsImages = [
                             Contribute to graphic design, video production, and digital media projects. Showcase
                             creativity and technical skills.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/multimedia-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/public-relations.png"}
@@ -447,18 +449,18 @@ const eventsImages = [
                         <p class={"font-dmSans text-sm text-slate-600"}>
                             Shape the club's public image through communication strategies and social media management.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/public-relations-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/photography.png"}
@@ -474,18 +476,18 @@ const eventsImages = [
                             Capture moments at events and community projects. Develop photography skills and visually
                             enhance the club's narrative.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/photography-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/social-media.png"}
@@ -500,18 +502,18 @@ const eventsImages = [
                         <p class={"font-dmSans text-sm text-slate-600"}>
                             Manage online presence, create content, and run campaigns. Connect with a wider audience.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/social-media-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/management.png"}
@@ -526,18 +528,18 @@ const eventsImages = [
                         <p class={"font-dmSans text-sm text-slate-600"}>
                             Contribute to event planning and execution. Hone organizational and leadership skills.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/management-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
                 <div class={"col-span-12 sm:col-span-6 grid w-full cursor-pointer grid-cols-5 rounded-lg border-2 border-slate-200 py-4 px-2 hover:border-slate-400 md:col-span-4 lg:col-span-3"}>
                     <div class={"col-span-full md:col-span-1"}>
-                        <img
+                        <Image
                                 height={32}
                                 width={32}
                                 src={"/icons/domain/performance-art.png"}
@@ -553,13 +555,13 @@ const eventsImages = [
                             Showcase talents in music, dance, theater, and more. Contribute creatively to cultural
                             events.
                         </p>
-                        <!--<a-->
-                        <!--  href={"#"}-->
-                        <!--  class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}-->
-                        <!--&gt;-->
-                        <!--    <span class="pb-1">Know More</span>-->
-                        <!--    <RiArrowRightSLine client:only="react" class={"inline-block"}/>-->
-                        <!--</a>-->
+                        <a
+                         href={"/about/domain/performing-arts-services"}
+                         class={"text-sm text-rose-500 hover:underline flex flex-row items-center "}
+                        >
+                           <span class="pb-1">Know More</span>
+                           <RiArrowRightSLine client:only="react" class={"inline-block"}/>
+                        </a>
                     </div>
                 </div>
 

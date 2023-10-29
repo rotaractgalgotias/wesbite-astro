@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import format from "date-fns/format";
+const { event } = Astro.props;
+
+// const coverImages = await import.meta.glob('/src/assets/cover/*.{jpg,png,webp}',{eager: true});
+// const cover = Object.keys(coverImages).map( (path) => {
+//   const regex = /\/cover\/([^/]+)\./;
+//   const match = path.match(regex);
+//   if (match && match[1] === event?.slug)
+//     return coverImages[path].default;
+// }).filter(image => image !== undefined);
+
+
+import sampleCover from "/src/assets/sample.jpeg";
+
+---
+
+<a
+    href=`/events/${event.slug}`
+    class="cursor-pointer group col-span-12 lg:col-span-4 rounded flex flex-col justify-between overflow-hidden shadow-lg hover:border-blue-600 border-transparent border-2 transition duration-200">
+    <div>
+        <img class="w-full h-56 object-cover group-hover:scale-110 transition duration-500" src={event.data.image} alt={event.data.title}/>
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">{event.data.title}</div>
+            <div class="text-gray-700 text-justify"> {event.data.description} </div>
+        </div>
+    </div>
+    <div class="flex flex-row justify-center items-center px-6 transition duration-200 ease-in-out translate-y-10 group-hover:-translate-y-0 w-full bg-blue-600 h-10">
+        <span class="text-white font-bold text-center">
+            {format(event.data.date, 'dd MMM, yyyy')}
+        </span>
+    </div>
+</a> 
