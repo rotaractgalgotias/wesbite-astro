@@ -5,6 +5,6 @@ const { images, event } = Astro.props;
 
 <div class="my-10 max-w-screen-2xl w-full mx-auto lg:col-span-6 columns-1 gap-2 lg:gap-2 sm:columns-3 md:columns-5 [&>img:not(:first-child)]:mt-2 lg:[&>img:not(:first-child)]:mt-2">
     {images.map((image) => (
-        <Image src={image} alt={event+"'s photos"}/>
+        <Image width={300} height={500} src={image} alt={event+"'s photos"}/>
     ))}
 </div>
