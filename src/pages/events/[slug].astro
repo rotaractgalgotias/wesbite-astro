@@ -49,14 +49,13 @@ const photos = Object.keys(images).map( (path) => {
 }).filter(image => image !== undefined);
 // console.log(photos);
 
-const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp}',{eager: true});
+const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp,JPG}',{eager: true});
 const cover = Object.keys(coverImages).map( (path) => {
   const regex = /\/cover\/([^/]+)\./;
   const match = path.match(regex);
   if (match && match[1] === event?.slug)
     return coverImages[path].default;
 }).filter(image => image !== undefined);
-console.log(cover[0]);
 ---
 <Layout
   title={`${event.data.title} - Rotaract Galgotias`}
