@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import format from "date-fns/format/index.js";
-const { event } = Astro.props;
+const { event, coverImage } = Astro.props;
 
 // const coverImages = await import.meta.glob('/src/assets/cover/*.{jpg,png,webp}',{eager: true});
 // const cover = Object.keys(coverImages).map( (path) => {
@@ -20,7 +20,13 @@ import sampleCover from "/src/assets/sample.jpeg";
     href=`/events/${event.slug}`
     class="cursor-pointer group col-span-12 sm:col-span-6 lg:col-span-4 rounded-lg flex flex-col justify-between overflow-hidden shadow  border-transparent border-2 transition duration-200">
     <div class="relative bg-gray-950">
-        <img class="w-full h-56 object-cover group-hover:scale-110 transition duration-500" src={event.data.image} alt={event.data.title}/>
+        <Image 
+            class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+            src={event.data.image}
+            alt={event.data.title}
+            width={400}
+            height={300}
+            />
         <!-- <span class="font-bold text-sm uppercase text-white bg-opacity-30 rounded-es-lg line-clamp-1 top-0 right-0 p-3 bg-black absolute">
             {format(event.data.date, 'dd MMM, yyyy')}
         </span> -->

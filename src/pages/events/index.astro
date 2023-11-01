@@ -8,6 +8,16 @@ import { Image } from "astro:assets";
 
 import EventCard from "../../components/event-card.astro";
 
+const coverImages = await import.meta.glob('/src/assets/cover/*.{jpg,png,webp}',{eager: true});
+const cover = Object.keys(coverImages).map( (path) => {
+  const regex = /\/cover\/([^/]+)\./;
+  const match = path.match(regex);
+  const filename = match[1];
+  return { [filename]: coverImages[path].default };
+});
+
+console.log(cover);
+
 ---
 
 <Layout
@@ -18,8 +28,8 @@ import EventCard from "../../components/event-card.astro";
     <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
         <div class={"container grid grid-cols-12 gap-8"}>
             <div class={"col-span-full flex flex-col gap-4 justify-between"}>
-                <h1
-                        class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
+                <h1 
+                    class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
                 >
                     Our Events
                 </h1>
@@ -28,7 +38,7 @@ import EventCard from "../../components/event-card.astro";
                 </p>
             </div>
             {
-              events.map((event)=><EventCard event={event}/>)
+              events.map((event)=><EventCard event={event} cover={cover[event.slug]}/>)
             }
 
             </div>

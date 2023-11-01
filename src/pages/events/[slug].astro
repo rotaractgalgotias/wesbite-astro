@@ -40,7 +40,7 @@ const {Content} = await event.render()
 //     });
 // });
 
-const images = await import.meta.glob('/src/assets/events/*/**.jpg',{eager: true});
+const images = await import.meta.glob('/src/assets/events/*/**.{jpg,png,webp,JPG}',{eager: true});
 const photos = Object.keys(images).map( (path) => {
   const regex = /\/events\/([^/]+)\//;
   const match = path.match(regex);
@@ -87,7 +87,7 @@ console.log(event.slug,coverImage);
             </div>
         </div>
     </div>
-    <div class="prose lg:prose-xl mx-auto">
+    <div class="prose lg:prose-2xl lg:max-w-screen-lg prose-p:text-justify mx-auto">
         <Content/>
 
     </div>
