@@ -334,6 +334,16 @@ export const TeamData:Team[] = [
             id:"C09",
             fullName:"Rounak Sharma",
             mdxFile:""
+          },
+          {
+            id:"C09",
+            fullName:"Shubham",
+            mdxFile:""
+          },
+          {
+            id:"C09",
+            fullName:"Rashi",
+            mdxFile:""
           }
         ]
       },
@@ -356,11 +366,6 @@ export const TeamData:Team[] = [
         name:"Multimedia Service",
         members:[
           {
-            id:"C16",
-            fullName:"Sonal Singh",
-            mdxFile:""
-          },
-          {
             id:"C17",
             fullName:"Deepak Kushwaha",
             mdxFile:""
@@ -375,11 +380,6 @@ export const TeamData:Team[] = [
       {
         name:"Public Relation",
         members:[
-          {
-            id:"C12",
-            fullName:"Naman Rusia",
-            mdxFile:""
-          },
           {
             id:"C13",
             fullName:"Ujjval Rajput",
