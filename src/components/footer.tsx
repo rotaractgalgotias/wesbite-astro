@@ -224,7 +224,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href="/documents/media-kit"
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     Media Kit

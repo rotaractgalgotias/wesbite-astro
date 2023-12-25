@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import {HeroSlider} from "../../../components/hero-slider";
+import {RiArrowRightSLine} from "react-icons/ri";
+
+const pageContent = [
+    {
+        Label: "View All Events",
+        Description: "We organize a variety of events throughout the year. Check out our calendar to see what's coming up next./",
+    }
+
+]
+
+---
+
+<Layout
+        title="Media Kits - Documents - RcGEI | Rotaract Galgotias Website"
+        description="Find all our images and logos here."
+        ogImage="/og.png"
+>
+<main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
+    <div class={"container flex flex-col gap-8 my-5"}>
+        <h1 class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-5xl"}>
+            Media Files
+        </h1>
+        <p class={"font-dmSans text-lg text-slate-600"}>
+            Explore our media kit for a comprehensive collection of event images and logos, providing you with a visual journey through our impactful Rotaract Galgotias events.
+        </p>
+        <ul>
+            <li>Notion List : <a href="https://visionarymedia.notion.site/2023-24-c9ed247dda2a40719522d65d87aba192">Click Here</a></li>
+            <li>Playbook Collection : <a href="https://www.playbook.com/s/visionary-media/Ee1iqfKQ3xtMHb2B6NWqFJ7e">Click Here</a></li>
+        </ul>
+    </div>
+</Layout>
