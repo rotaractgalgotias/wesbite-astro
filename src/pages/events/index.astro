@@ -38,7 +38,8 @@ console.log(cover);
                 </p>
             </div>
             {
-              events.map((event)=><EventCard event={event} cover={cover[event.slug]}/>)
+              events.map((event)=>
+              <EventCard event={event} cover={cover[event.slug]}/>)
             }
 
             </div>
