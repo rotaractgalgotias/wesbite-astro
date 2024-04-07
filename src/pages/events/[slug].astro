@@ -52,7 +52,7 @@ const photos = Object.keys(images).map( (path) => {
 
 const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp,JPG}',{eager: true});
 
-let coverImage=null;
+let coverImage=coverImages['/src/assets/cover/image-not-found.png'].default;
 for (const path of Object.keys(coverImages)) {
   const regex = /\/cover\/([^/]+)\./;
   const match = path.match(regex);
@@ -60,10 +60,6 @@ for (const path of Object.keys(coverImages)) {
     coverImage = coverImages[path].default
   }
 }
-
-console.log(event.slug,coverImage);
-
-
 ---
 <Layout
   title={`${event.data.title} - Rotaract Galgotias`}

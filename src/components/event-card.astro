@@ -1,16 +1,18 @@
 ---
 import { Image } from "astro:assets";
 import format from "date-fns/format/index.js";
-const { event, coverImage } = Astro.props;
+const { event } = Astro.props;
 
 // const coverImages = await import.meta.glob('/src/assets/cover/*.{jpg,png,webp}',{eager: true});
-// const cover = Object.keys(coverImages).map( (path) => {
-//   const regex = /\/cover\/([^/]+)\./;
-//   const match = path.match(regex);
-//   if (match && match[1] === event?.slug)
-//     return coverImages[path].default;
-// }).filter(image => image !== undefined);
 
+// let coverImage=coverImages['/src/assets/cover/image-not-found.png'].default;
+// for (const path of Object.keys(coverImages)) {
+//     const regex = /\/cover\/([^/]+)\./;
+//     const match = path.match(regex);
+//     if (match && match[1] == event?.slug) {
+//         coverImage = coverImages[path].default
+//     }
+// }
 
 import sampleCover from "/src/assets/sample.jpeg";
 
