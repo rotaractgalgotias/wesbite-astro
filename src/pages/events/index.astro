@@ -36,9 +36,13 @@ console.log(cover);
                 <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
                     We organize a variety of fundraising activities, community service projects, and professional development workshops throughout the year. We also collaborate with other clubs and organizations to create meaningful projects that have a lasting impact on our community.
                 </p>
+                <hr>
+                <h2 class="text-base font-bold">
+                    In 2023-24, till now we have we organized <span class="underline font-extrabold">{events.length} Events</span>.
+                </h2>
             </div>
             {
-              events.map((event)=><EventCard event={event} cover={cover[event.slug]}/>)
+              events.map((event)=><EventCard event={event}/>)
             }
 
             </div>
