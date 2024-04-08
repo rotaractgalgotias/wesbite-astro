@@ -1,6 +1,5 @@
 ---
-import "@fontsource-variable/outfit";
-import "@fontsource/dm-sans";
+import { AstroFont } from "astro-font";
 
 import "../global.css";
 
@@ -62,6 +61,28 @@ const { title, description, ogImage } = Astro.props;
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+    <AstroFont
+      config={[
+        {
+          src: [],
+          preload: false,
+          display: "swap",
+          name: "DM Sans",
+          fallback: "sans-serif",
+          cssVariable: "dm-sans",
+          googleFontsURL: 'https://fonts.googleapis.com/css2?family=DM+Sans',
+        },
+        {
+          src: [],
+          preload: false,
+          display: "swap",
+          fallback: "sans-serif",
+          name: "Outfit Variable",
+          cssVariable: "outfit-variable",
+          googleFontsURL: 'https://fonts.googleapis.com/css2?family=Outfit:wght@100..900',
+        },
+      ]}
+    />
   </head>
   <body class={`bg-gray-100`}>
     <div class="w-full p-2 bg-gray-800 text-white md:text-center text-left flex flex-row items-center justify-center text-sm md:text-lg">

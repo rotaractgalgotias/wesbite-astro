@@ -136,11 +136,6 @@ export const TeamData:Team[] = [
             id:"D06",
             fullName:"Khushi Bhati",
             mdxFile:""
-          },
-          {
-            id:"D07",
-            fullName:"Sahil Bhatia",
-            mdxFile:""
           }
         ]
       },
