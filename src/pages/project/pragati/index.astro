@@ -10,54 +10,12 @@ import img2 from '../../../assets/pragati00.jpeg';
 import img3 from '../../../assets/pragati01.jpeg';
 import img4 from '../../../assets/pragati02.jpeg';
 import img5 from '../../../assets/pragati03.jpeg';
-export async function getStaticPaths() {
-  const events = await getCollection("project");
-  return events.map((event) => {
-    return {
-      params: {
-        slug: event.slug,
-      },
-      props: {
-        event
-      },
-    };
-  });
-}
 
-const {event} = Astro.props;
-// const dateObj = new Date(event.data.date);
-// const date = {
-//   day: format(dateObj, 'dd'),
-//   month: format(dateObj, 'LLL'),
-//   year: format(dateObj, 'yyyy'),
-//   dayOfWeek: format(dateObj, 'EEEE')
-// }
-
-// const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
-//     return files.filter(file => {
-//         const regex = /\/events\/([^/]+)\//;
-//         const match = file.default.match(regex);
-//         if (match && match[1] === event?.slug)
-//             return file.default;
-//     }).map(file => {
-//         return file.default;
-//     });
-// });
-const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp,JPG}',{eager: true});
-
-let coverImage=coverImages['/src/assets/cover/image-not-found.png'];
-for (const path of Object.keys(coverImages)) {
-  const regex = /\/cover\/([^/]+)\./;
-  const match = path.match(regex);
-  if (match && match[1] == event?.slug) {
-    coverImage = coverImages[path]
-  }
-}
 ---
 <Layout
   title="Pragati - Transforming Classrooms, Transforming Lives"
   description="Join us in revitalizing a school and creating brighter, more engaging learning environments for students"
-  ogImage={coverImage.src}
+  ogImage={""}
 >
 <section>
     <div>
