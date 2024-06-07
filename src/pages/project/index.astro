@@ -1,0 +1,63 @@
+---
+import {getCollection} from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+const events = await getCollection("events");
+events.sort((a, b) => (new Date(b.data.date)).getTime() - (new Date(a.data.date)).getTime())
+import format from 'date-fns/format/index.js';
+import { Image } from "astro:assets";
+
+import EventCard from "../../components/event-card.astro";
+
+const coverImages = await import.meta.glob('/src/assets/cover/*.{jpg,png,webp}',{eager: true});
+const cover = Object.keys(coverImages).map( (path) => {
+  const regex = /\/cover\/([^/]+)\./;
+  const match = path.match(regex);
+  const filename = match[1];
+  return { [filename]: coverImages[path].default };
+});
+
+console.log(cover);
+
+---
+
+<Layout
+    title="Events - Rotaract Galgotias | Explore Our Events"
+    description="Check out the diverse range of events organized by Rotaract Club of Galgotias. Engage with our community and be part of the positive change we bring through our events. Join us in creating a better world together."
+    ogImage="/og.png"
+>
+    <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
+        <div class={"container grid grid-cols-12 gap-8"}>
+            <div class={"col-span-full flex flex-col gap-4 justify-between"}>
+                <h1 
+                    class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
+                >
+                    Our Events
+                </h1>
+                <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
+                    We organize a variety of fundraising activities, community service projects, and professional development workshops throughout the year. We also collaborate with other clubs and organizations to create meaningful projects that have a lasting impact on our community.
+                </p>
+                <hr>
+                <h2 class="text-base font-bold">
+                    In 2023-24, till now we have we organized <span class="underline font-extrabold">{events.length} Events</span>.
+                </h2>
+            </div>
+            {
+              events.map((event)=><EventCard event={event}/>)
+            }
+
+            </div>
+            <div class="w-full bg-white p-5 container shadow-lg">
+                <div class="w-full flex flex-col justify-center items-center gap-2">
+                    <h1 class="font-outfit text-2xl font-extrabold text-slate-800 lg:text-6xl">
+                        View Past Tenure Events
+                    </h1>
+                    <p class="font-dmSans text-sm text-slate-600 md:text-lg text-justify">
+                        We have been organizing events since 2010. Check out our available past tenure events.
+                    </p>
+                    <a target="_blank" href="https://2022-23.rotaractgalgotias.org/events" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        2022-23 Events
+                    </a>
+                </div>
+            </div>
+    </main>
+</Layout>
