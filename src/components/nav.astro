@@ -2,57 +2,82 @@
 import { Image } from "astro:assets";
 import Logo from "../assets/logo-circle.png";
 ---
-<nav class="container mx-auto mt-5 flex w-full flex-row items-center justify-between rounded-lg px-0 py-3 md:my-5 md:bg-white md:px-8 md:border-2 md:border-gray-200">
-    <a href="/">
-      <div class="flex flex-row items-center gap-3">
-        <Image src={Logo} alt="Rotaract Galgotias Logo" height={150} width={150} class="h-14 w-auto -ml-3 lg:ml-auto" />
-        <div class="hidden flex-col md:flex">
-          <span class="h-7 font-outfit text-2xl font-bold">
-            Rotaract Club
-          </span>
-          <span class="font-outfit text-sm font-medium">
-            Galgotias Educational Institutions
-          </span>
-        </div>
-        <div class="flex flex-col md:hidden">
-          <span class="h-6 font-outfit text-xl font-bold">Rotaract Club</span>
-          <span class="font-outfit text-xs font-medium">Galgotias Educational Institutions</span>
-        </div>
+<nav class="container mx-auto mt-5 flex w-full flex-row items-center justify-between rounded-2xl px-0 py-3 shadow-xl md:my-5 md:bg-gray-100 md:px-8 md:border-3 sm:flex">
+  <a href="/">
+    <div class="flex flex-row items-center gap-3">
+      <Image src={Logo} alt="Rotaract Galgotias Logo" height={150} width={150} class="h-14 w-auto -ml-3 lg:ml-auto transition-transform duration-200 ease-in-out hover:scale-110" />
+      <div class="hidden flex-col md:flex">
+        <span class="h-7 font-serif text-2xl font-bold transition duration-300 ease-in-out ">
+          Rotaract Club
+        </span>
+        <span class="font-outfit text-sm font-medium transition duration-300 ease-in-out hover:text-gray-600 hover:underline">
+          Galgotias Educational Institutions
+        </span>
       </div>
+      <div class="flex flex-col md:hidden">
+        <span class="h-6 font-outfit text-xl font-bold transition duration-300 ease-in-out hover:text-blue-600 hover:underline">
+          Rotaract Club
+        </span>
+        <span class="font-outfit text-xs font-medium transition duration-300 ease-in-out hover:text-blue-600 hover:underline">
+          Galgotias Educational Institutions
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <div>
+    <i id="menuIcon" class="fas fa-bars cursor-pointer text-4xl md:hidden text-black">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+    </i>
+  </div>
+
+  <div class="hidden text-xl font-outfit gap-8 md:flex">
+    <a href="/" class="text-black relative group font-dmSans">
+      Home
+      <span class="block absolute left-0 bottom-0 w-0 h-1 bg-gray-600 transition-all duration-500 group-hover:w-full"></span>
+    </a>
+    <a href="/about" class="text-black relative group font-dmSans">
+      About
+      <span class="block absolute left-0 bottom-0 w-0 h-1 bg-gray-600 transition-all duration-500 group-hover:w-full"></span>
+    </a>
+    <a href="/team" class="text-black relative group font-dmSans">
+      Teams
+      <span class="block absolute left-0 bottom-0 w-0 h-1 bg-gray-600 transition-all duration-500 group-hover:w-full"></span>
+    </a>
+    <a href="events" class="text-black relative group font-dmSans">
+      Events
+      <span class="block absolute left-0 bottom-0 w-0 h-1 bg-gray-600 transition-all duration-500 group-hover:w-full"></span>
+    </a>
+    <a href="team/past" class="text-black relative group font-dmSans">
+      Past Teams
+      <span class="block absolute left-0 bottom-0 w-0 h-1 bg-gray-600 transition-all duration-500 group-hover:w-full"></span>
     </a>
 
-    <div>
-      <i id="menuIcon" class="fas fa-bars cursor-pointer text-4xl md:hidden text-black">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
-      </i>
-    </div>
+    
+  </div>
 
-    <div class="hidden flex-row items-center justify-between gap-6 font-dmSans text-xl font-medium  md:flex text-black " >
-      <a class =""href="/">Home</a>
-      <a class =""href="/about">About</a>
-      <a class =""href="/team">Team</a>
-      <a class =""href="/events">Events</a>
-      <a class =""href="/team/past">Past Teams</a>
-    </div>
-
-    <div id="mobileMenu" class="fixed left-0 top-0 z-50 block h-full w-full bg-gray-100 md:hidden transition-all -translate-x-full duration-200 ease-out">
-      <div class="flex h-full flex-col items-center justify-center">
-        <div class="fixed right-5 top-16">
-          <i id="closeIcon" class="fas fa-times text-5xl text-black">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 cursor-pointer" viewBox="0 0 24 24"><path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"></path></svg>
-          </i>
-        </div>
-        <div class="flex flex-col items-center justify-center gap-14 font-dmSans text-4xl">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/team">Team</a>
-          <a href="/events">Events</a>
-          <a href="/team/past">Past Teams</a>
-          <a href="/join">Interested to Join?</a>
-        </div>
+  <div id="mobileMenu" class="fixed left-0 top-0 z-50 block h-full w-full bg-gray-100 md:hidden transition-all -translate-x-full duration-200 ease-out">
+    <div class="flex h-full flex-col items-center justify-center">
+      <div class="fixed right-5 top-16">
+        <i id="closeIcon" class="fas fa-times md:p-4 text-5xl text-black">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 cursor-pointer" viewBox="0 0 24 24"><path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"></path></svg>
+        </i>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-14 font-dmSans text-4xl">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/team">Team</a>
+        <a href="/events">Events</a>
+        <a href="/team/past">Past Teams</a>
+        <a href="/join">Interested to Join?</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -70,5 +95,5 @@ import Logo from "../assets/logo-circle.png";
             mobileMenu.classList.add("-translate-x-full");
             mobileMenu.classList.remove("translate-x-0");
         });
-    });
-  </script>
+    });
+  </script>
