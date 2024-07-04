@@ -14,9 +14,7 @@ const Footer = () => {
             </a>
 
             <p className="mt-4 max-w-sm text-gray-500">
-              Rotaract Galgotias, we function as a service-oriented organization
-              that strives to create a better world through volunteerism,
-              community service, and professional development.
+              Innovation ahead
             </p>
 
             <ul className="mt-8 flex gap-6">
