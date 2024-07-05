@@ -104,7 +104,7 @@ export const TeamData:Team[] = [
           },
           {
             id:"D02",
-            fullName:"Prachi singh",
+            fullName:"Prachi Singh",
             mdxFile:""
           }
         ]
@@ -134,12 +134,12 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D06",
-            fullName:"Kritika singh",
+            fullName:"Kritika Singh",
             mdxFile:""
           },
           {
             id:"D07",
-            fullName:"Aditya Garg ",
+            fullName:"Aditya Garg",
             mdxFile:""
           }
         ]
@@ -169,7 +169,7 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D11",
-            fullName:"Shrishti Srivastava",
+            fullName:"Shrishti Shrivastava",
             mdxFile: ""
           },
           {
@@ -184,12 +184,12 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D18",
-            fullName:"Akansha Chaudhary",
+            fullName:"Akansha Choudhary",
             mdxFile:""
           },
           {
             id:"D19",
-            fullName:"pranav Raj",
+            fullName:"Pranav Raj",
             mdxFile:""
           },
           {
@@ -204,7 +204,7 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D13",
-            fullName:"Devansh Shrivastava",
+            fullName:"Devansh Shrivasava",
             mdxFile:""
           },
           {
