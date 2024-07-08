@@ -99,12 +99,12 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D01",
-            fullName:"Ankita Shukla",
+            fullName:"Ananya Gupta",
             mdxFile:""
           },
           {
             id:"D02",
-            fullName:"Pratyaksh Kumar",
+            fullName:"Prachi Singh",
             mdxFile:""
           }
         ]
@@ -114,17 +114,17 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D03",
-            fullName:"Divyanshu Katiyar",
+            fullName:"Dhruv Jha",
             mdxFile:""
           },
           {
             id:"D04",
-            fullName:"Yash Gupta",
+            fullName:"Priyesh Singh",
             mdxFile:""
           },
           {
             id:"D05",
-            fullName:"Yash Sharma",
+            fullName:"Shubham Pandey",
             mdxFile:""
           }
         ]
@@ -134,7 +134,12 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D06",
-            fullName:"Khushi Bhati",
+            fullName:"Kritika Singh",
+            mdxFile:""
+          },
+          {
+            id:"D07",
+            fullName:"Aditya Garg",
             mdxFile:""
           }
         ]
@@ -164,12 +169,12 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D11",
-            fullName:"Aruhi Pallavi",
+            fullName:"Shrishti Shrivastava",
             mdxFile: ""
           },
           {
             id:"D12",
-            fullName:"Niharika Srivastava",
+            fullName:"Shivansh Nigam",
             mdxFile:""
           }
         ]
@@ -179,17 +184,17 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D18",
-            fullName:"Areeb ur Rub",
+            fullName:"Akansha Choudhary",
             mdxFile:""
           },
           {
             id:"D19",
-            fullName:"Raunak Gupta",
+            fullName:"Pranav Raj",
             mdxFile:""
           },
           {
             id:"D20",
-            fullName:"Ritik Varshney",
+            fullName:"Anirudh Singh",
             mdxFile:""
           }
         ]
@@ -199,17 +204,17 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D13",
-            fullName:"Anurag Kumar Agrahari",
+            fullName:"Devansh Shrivasava",
             mdxFile:""
           },
           {
             id:"D15",
-            fullName:"Srishti Yadav",
+            fullName:"Sanskar Jaiswal",
             mdxFile:""
           },
           {
             id:"D15",
-            fullName:"Shivansh Johari",
+            fullName:"Vikas Singh",
             mdxFile:""
           }
         ]
@@ -219,12 +224,12 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D16",
-            fullName:"Ayan Khalid",
+            fullName:"Shreyash Srivastava",
             mdxFile:""
           },
           {
             id:"D17",
-            fullName:"Anurag Kaushik",
+            fullName:"Rachit Katiyar",
             mdxFile:""
           }
         ]
@@ -234,9 +239,14 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D21",
-            fullName:"Isha Srivastava",
+            fullName:"Urvashi Bajpai",
             mdxFile:""
           },
+          {
+            id:"D22",
+            fullName:"Aakanshi Garg",
+            mdxFile:""
+          }
         ]
       },
       {
@@ -244,12 +254,12 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D21",
-            fullName:"Arnav Katiyar",
+            fullName:"Krishna Samrat Bajpai",
             mdxFile:""
           },
           {
             id:"D12",
-            fullName:"Saksham Gupta",
+            fullName:"Abhishek Singh",
             mdxFile:""
           },
           
@@ -260,10 +270,24 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D21",
-            fullName:"Bhavya Sinha",
+            fullName:"Samridh Srivastava",
             mdxFile:""
           },
-          
+          {
+            id:"D23",
+            fullName:"Nandani Mittal",
+            mdxFile:""
+          }          
+        ]
+      },
+      {
+        name:"Techincal Services",
+        members:[
+          {
+            id:"D24",
+            fullName:"Utkarsh Khare",
+            mdxFile:""
+          }
         ]
       }
     ]

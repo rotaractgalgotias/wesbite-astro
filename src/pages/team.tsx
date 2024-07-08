@@ -1,6 +1,7 @@
 import { TeamData } from "../config/team";
 
 const TeamMemberComponent = ({ member, subGroupName }) => {
+  console.log(member);
   return (
     <a
       href={'/team/' + member.fullName.toLowerCase().replace(/ /g, '-')}
