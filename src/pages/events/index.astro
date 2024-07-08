@@ -13,7 +13,7 @@ const cover = Object.keys(coverImages).map( (path) => {
   const regex = /\/cover\/([^/]+)\./;
   const match = path.match(regex);
   const filename = match[1];
-  return { [filename]: coverImages[path].default };
+  return { [filename]: (coverImages[path] as Record<string, any>)?.default };
 });
 
 console.log(cover);
@@ -38,7 +38,7 @@ console.log(cover);
                 </p>
                 <hr>
                 <h2 class="text-base font-bold">
-                    In 2023-24, till now we have we organized <span class="underline font-extrabold">{events.length} Events</span>.
+                    In 2024-25, till now we have we organized <span class="underline font-extrabold">{events.length} Events</span>.
                 </h2>
             </div>
             {
@@ -54,6 +54,9 @@ console.log(cover);
                     <p class="font-dmSans text-sm text-slate-600 md:text-lg text-justify">
                         We have been organizing events since 2010. Check out our available past tenure events.
                     </p>
+                    <a target="_blank" href="https://2023-24.rotaractgalgotias.org/events" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        2023-24 Events
+                    </a>
                     <a target="_blank" href="https://2022-23.rotaractgalgotias.org/events" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         2022-23 Events
                     </a>
