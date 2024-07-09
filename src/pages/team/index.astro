@@ -18,7 +18,7 @@ import { TeamData } from "../../config/team";
         <h1
           class={"font-outfit text-4xl font-extrabold text-slate-800 lg:text-6xl"}
         >
-          Team 2023-24
+          Team 2024-25
         </h1>
         <p class={"font-dmSans text-sm text-slate-600 md:text-lg text-justify"}>
           Rotaract Galgotias follows a hierarchical system where the college
@@ -64,7 +64,8 @@ import { TeamData } from "../../config/team";
                 
                 <span
                   class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600"
-                  >+15</span
+                  >+{TeamData.filter((i) => i.name === "Board of Directors")
+        .flatMap((i) => i.subGroups.flatMap((j) => j.members).length -7)}</span
                 >
               </div>
             </div>
