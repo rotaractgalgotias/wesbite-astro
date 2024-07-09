@@ -1,7 +1,7 @@
 ---
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-const events = await getCollection("events");
+const events: Array<{ data: { date: string } }> = await getCollection("events");
 events.sort((a, b) => (new Date(b.data.date)).getTime() - (new Date(a.data.date)).getTime())
 import format from 'date-fns/format/index.js';
 import { Image } from "astro:assets";
