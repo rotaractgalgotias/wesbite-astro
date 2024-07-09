@@ -1,6 +1,8 @@
 ---
 import Team from "../team";
 import Layout from "../../layouts/Layout.astro";
+import Avatars from "./Avatars"
+import { TeamData } from "../../config/team";
 ---
 
 <Layout
@@ -42,50 +44,7 @@ import Layout from "../../layouts/Layout.astro";
               <h1 class={"font-dmSans text-lg font-bold text-slate-800"}>
                 Board Council
               </h1>
-              <div class="flex -space-x-4">
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Ashish%20Kumar%20Gupta.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Unnati%20Agarwal.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Aditya%20Kumar%20Ojha.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Yashica%20Chauhan.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Indu%20Banerjee.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Rohit%20Saini.jpg"
-                  alt=""
-                />
-              </div>
+              <Avatars group="Board Council" client:visible/>
             </div>
           </a>
 
@@ -100,55 +59,9 @@ import Layout from "../../layouts/Layout.astro";
                 Board of Directors
               </h1>
               <div class="flex -space-x-4">
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
-                  src="/team/Yash%20Gupta.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Ankita%20Shukla.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Sanket%20Gupta.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Sahil%20Bhatia.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Areeb%20ur%20Rub.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Anurag%20Kaushik.jpg"
-                  alt=""
-                />
-                <img
-                  height={20}
-                  width={20}
-                  class="h-10 w-10 rounded-full border-2 border-white"
-                  src="/team/Thakur%20Manu%20Chauhan.jpg"
-                  alt=""
-                />
+                <Avatars group="Board of Directors" client:visible/>
+                
+                
                 <span
                   class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600"
                   >+15</span
