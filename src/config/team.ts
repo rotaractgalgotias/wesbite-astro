@@ -149,17 +149,17 @@ export const TeamData:Team[] = [
         members:[
           {
             id:"D08",
-            fullName:"Aman Wadhwani",
+            fullName:"Shubham Singh",
             mdxFile:""
           },
           {
             id:"D09",
-            fullName:"Sanket Gupta",
+            fullName:"Rashi Gupta",
             mdxFile:""
           },
           {
             id:"D010",
-            fullName:"Shivendra Pratap Singh",
+            fullName:"Prashant Joshi",
             mdxFile:""
           }
         ]
