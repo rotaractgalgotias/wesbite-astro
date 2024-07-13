@@ -33,27 +33,18 @@ export const TeamData: Team[] = [
         members: [
           {
             id: "01",
-            fullName: "Unnati Agarwal",
+            fullName: "Areeb ur Rub",
             mdxFile: "",
           },
         ],
       },
+
       {
         name: "Vice President",
         members: [
           {
             id: "01",
             fullName: "Anurag Kaushik",
-            mdxFile: "",
-          },
-        ],
-      },
-      {
-        name: "Public Relation Officer",
-        members: [
-          {
-            id: "01",
-            fullName: "Sanket Gupta",
             mdxFile: "",
           },
         ],
@@ -74,6 +65,26 @@ export const TeamData: Team[] = [
           {
             id: "01",
             fullName: "Ritik Varshney",
+            mdxFile: "",
+          },
+        ],
+      },
+      {
+        name: "Treasurer",
+        members: [
+          {
+            id: "01",
+            fullName: "Bhavya Sinha",
+            mdxFile: "",
+          },
+        ],
+      },
+      {
+        name: "Public Relation Officer",
+        members: [
+          {
+            id: "01",
+            fullName: "Sanket Gupta",
             mdxFile: "",
           },
         ],
@@ -139,17 +150,17 @@ export const TeamData: Team[] = [
         members: [
           {
             id: "D08",
-            fullName: "Aman Wadhwani",
+            fullName: "Shubham Singh",
             mdxFile: "",
           },
           {
             id: "D09",
-            fullName: "Sanket Gupta",
+            fullName: "Rashi Gupta",
             mdxFile: "",
           },
           {
             id: "D010",
-            fullName: "Shivendra Pratap Singh",
+            fullName: "Prashant Joshi",
             mdxFile: "",
           },
         ],
