@@ -1,3 +1,4 @@
+import FaceCenteredImage from "../components/FaceCenteredImg";
 import { TeamData } from "../config/team";
 
 const TeamMemberComponent = ({ member, subGroupName }) => {
@@ -10,7 +11,14 @@ const TeamMemberComponent = ({ member, subGroupName }) => {
         "col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 xl:col-span-1"
       }
     >
-      <img
+      {/* <img
+        src={`/team/${member.fullName}.jpg`}
+        alt={member.fullName}
+        className={
+          "h-40 w-40 cursor-pointer rounded-full border-4 border-transparent object-cover transition-all duration-200 hover:border-rose-500"
+        }
+      /> */}
+      <FaceCenteredImage
         src={`/team/${member.fullName}.jpg`}
         alt={member.fullName}
         className={
