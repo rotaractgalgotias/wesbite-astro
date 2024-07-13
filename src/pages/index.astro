@@ -314,14 +314,14 @@ const eventsImages = [
       class={"col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 lg:col-span-1"}
       
     >
-      {/* <img
+      <img
         src={`/team/${member.fullName.replaceAll(" ", "%20")}.jpg`}
         alt={member.fullName}
         height={300}
         width={300}
         class={"rounded-full object-cover aspect-square"}
-      /> */}
-      <FaceCenteredImage client:only src={`/team/${member.fullName.replaceAll(" ", "%20")}.jpg`} className={"rounded-full h-full w-full object-cover aspect-square"} />
+      />
+      {/* <FaceCenteredImage client:only src={`/team/${member.fullName.replaceAll(" ", "%20")}.jpg`} className={"rounded-full h-full w-full object-cover aspect-square"} /> */}
       <div class={"flex flex-col items-center justify-center"}>
         <span class={"font-dmSans text-sm font-bold"}>
           Rtr. {member.fullName}
