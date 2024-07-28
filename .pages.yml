@@ -1,5 +1,5 @@
 content:
- - name: domain
+  - name: domain
     label: Domain
     path: src/content/domain
     type: collection
