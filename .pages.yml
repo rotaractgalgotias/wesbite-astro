@@ -1,7 +1,7 @@
 content:
-  - name: events
-    label: Events
-    path: src/content/events
+ - name: domain
+    label: Domain
+    path: src/content/domain
     type: collection
     fields:
       - name: title
@@ -12,15 +12,3 @@ content:
         label: Description
         type: string
         required: true
-      - name: date
-        label: Date
-        type: date
-        required: true
-      - name: image
-        label: Image
-        type: string
-        required: false
-      - name: images
-        label: Images
-        type: string
-        required: false
