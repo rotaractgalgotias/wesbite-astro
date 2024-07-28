@@ -1,0 +1,26 @@
+content:
+  - name: events
+    label: Events
+    path: src/content/events
+    type: collection
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: image
+        label: Image
+        type: string
+        required: false
+      - name: images
+        label: Images
+        type: string
+        required: false
