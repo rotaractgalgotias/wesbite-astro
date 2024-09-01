@@ -1,5 +1,7 @@
 import { TeamData } from "../config/team";
 
+// sd
+
 const TeamMemberComponent = ({ member, subGroupName }) => {
   return (
     <a
