@@ -38,4 +38,5 @@ export const collections = {
   events: eventCollection,
   team: teamCollection,
   domain: domainCollection,
+  projects: eventCollection,
 };

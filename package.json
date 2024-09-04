@@ -26,6 +26,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^2.30.0",
+    "embla-carousel-react": "^8.2.1",
     "face-api.js": "^0.20.0",
     "framer-motion": "^10.12.16",
     "framer-motion-carousel": "^2.0.3",
