@@ -5,12 +5,25 @@ const Footer = () => {
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-10 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="flex flex-col justify-between gap-8 lg:flex-row">
           <div>
-            <a href={"/"} className="text-teal-600">
+            <a href={"/"} >
+              <div className="flex flex-row items-center gap-3">
               <img
                 src={"/logo.png"}
                 className={"h-20"}
                 alt={"Rotaract Galgotias Logo"}
-              />
+              />                <div className="hidden flex-col md:flex">
+                  <span className="h-7 font-outfit text-2xl font-bold">
+                    Rotaract Club
+                  </span>
+                  <span className="font-outfit text-sm font-medium">
+                    Galgotias Educational Institutions
+                  </span>
+                </div>
+                <div className="flex flex-col md:hidden">
+                  <span className="h-6 font-outfit text-xl font-bold">Rotaract Club</span>
+                  <span className="font-outfit text-xs font-medium">Galgotias Educational Institutions</span>
+                </div>
+              </div>
             </a>
 
             <p className="mt-4 max-w-sm text-gray-500">
