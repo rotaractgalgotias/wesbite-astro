@@ -14,9 +14,9 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <section className="">
+      <div className="container">
+        <div className="grid grid-cols-2 gap-3 lg:gap-6 lg:grid-cols-2">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.name}
@@ -25,11 +25,11 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="overflow-hidden border-none shadow-md">
-                <CardContent className="p-6">
-                  <div className="mb-4 flex items-center justify-between">
-                    <stat.icon className="h-8 w-8 text-primary" />
+                <CardContent className="px-3 py-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <stat.icon className="size-5 lg:size-6 text-primary" />
                     <motion.div
-                      className="text-4xl font-bold text-foreground"
+                      className="lg:text-lg text-sm font-bold text-foreground"
                       initial={{ scale: 0.5 }}
                       animate={{ scale: 1 }}
                       transition={{ type: "spring", stiffness: 100 }}
@@ -37,7 +37,7 @@ export default function Stats() {
                       {stat.value}
                     </motion.div>
                   </div>
-                  <p className="truncate text-sm font-medium text-muted-foreground">
+                  <p className="truncate text-xs lg:text-sm font-medium text-muted-foreground">
                     {stat.name}
                   </p>
                 </CardContent>

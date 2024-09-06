@@ -34,9 +34,21 @@ const domainCollection = defineCollection({
   }),
 });
 
+const projectCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.date(),
+    image: z.string().optional(),
+    images: z.array(z.string()).optional(),
+  }),
+});
+
+
 export const collections = {
   events: eventCollection,
   team: teamCollection,
   domain: domainCollection,
-  projects: eventCollection,
+  projects: projectCollection,
 };
