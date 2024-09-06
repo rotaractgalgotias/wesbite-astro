@@ -50,14 +50,15 @@ const photos = Object.keys(images).map( (path) => {
 // console.log(photos);
 
 
-const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp,JPG}',{eager: true});
+const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp,JPG,jpeg}',{eager: true});
 
 let coverImage=coverImages['/src/assets/cover/image-not-found.png'].default;
 for (const path of Object.keys(coverImages)) {
   const regex = /\/cover\/([^/]+)\./;
   const match = path.match(regex);
+  
   if (match && match[1] == event?.slug) {
-    coverImage = coverImages[path].default
+    coverImage = coverImages[path]?.default
   }
 }
 ---
@@ -66,7 +67,7 @@ for (const path of Object.keys(coverImages)) {
   description={event.data.description}
   ogImage={coverImage.src}
 >
-    <div class="relative mb-14 max-w-screen-lg mx-auto">
+    <div class="relative mb-14 max-w-4xl  mx-auto">
         <Image src={coverImage} alt={event.data.title} class="rounded-lg w-full"/>
 
         <div class="w-32 h-32 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
@@ -83,7 +84,7 @@ for (const path of Object.keys(coverImages)) {
             </div>
         </div>
     </div>
-    <div class="prose lg:prose-2xl lg:max-w-screen-lg prose-p:text-justify mx-auto">
+    <div class="prose lg:prose-lg lg:max-w-screen-lg prose-p:text-justify mx-auto">
         <Content/>
 
     </div>
