@@ -105,7 +105,7 @@ export const TeamData: Team[] = [
           },
           {
             id: "D02",
-            fullName: "Prachi Singh",
+            fullName: "Prachi Chaudhary",
             mdxFile: "",
           },
         ],
