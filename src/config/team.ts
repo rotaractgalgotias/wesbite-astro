@@ -170,7 +170,7 @@ export const TeamData: Team[] = [
         members: [
           {
             id: "D11",
-            fullName: "Shrishti Shrivastava",
+            fullName: "Srishti Srivastava",
             mdxFile: "",
           },
           {
