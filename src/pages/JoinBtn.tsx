@@ -41,14 +41,19 @@ export default function JoinBtn() {
           </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-              <DropdownMenuItem>
-                <FormInputIcon className="mr-2 h-4 w-4" />
-                <span>Get Membership</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <MessageCircle className="mr-2 h-4 w-4" />
-                <span>Join Updates Group</span>
-              </DropdownMenuItem>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNZFtEsPdc7kkPohz59DgsgzIqIiY1ze488YpgbfcRIEBHFg/viewform">
+                <DropdownMenuItem>
+                  <FormInputIcon className="mr-2 h-4 w-4" />
+                  <span>Get Membership</span>
+                </DropdownMenuItem>
+              </a>
+
+              <a href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
+                <DropdownMenuItem>
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  <span>Join Updates Group</span>
+                </DropdownMenuItem>
+              </a>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>
@@ -59,14 +64,20 @@ export default function JoinBtn() {
           </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-              <DropdownMenuItem>
-                <FormInputIcon className="mr-2 h-4 w-4" />
-                <span>Get Membership</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <MessageCircle className="mr-2 h-4 w-4" />
-                <span>Join Updates Group</span>
-              </DropdownMenuItem>
+                {/* note: link not available */}
+              <a href="#">
+                <DropdownMenuItem>
+                  <FormInputIcon className="mr-2 h-4 w-4" />
+                  <span>Get Membership</span>
+                </DropdownMenuItem>
+              </a>
+
+              <a href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
+                <DropdownMenuItem>
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  <span>Join Updates Group</span>
+                </DropdownMenuItem>
+              </a>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>
