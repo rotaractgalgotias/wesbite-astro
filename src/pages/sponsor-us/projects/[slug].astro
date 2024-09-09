@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro'
+import Project from "../Project"
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => {
+    console.log(project)
+    return {
+      params: {
+        slug: project.slug,
+      },
+      props: {
+        project,
+      },
+    };
+  });
+}
+
+const {project} = Astro.props;
+const {Content} = await project.render()
+---
+
+<Layout
+  title="Team - RcGEI | Rotaract Galgotias Website"
+  description="Rotaract Galgotias follows a hierarchical system where the college year determines the roles and responsibilities of its members. The core council comprises final year students, while directors are selected from the third year students. Second year students, on the other hand, actively contribute as coordinators."
+  ogImage="/og.png"
+>
+
+<main class="flex flex-col items-center">
+  <Project client:visible props={project}>
+    <Content/>
+  </Project>
+</main>

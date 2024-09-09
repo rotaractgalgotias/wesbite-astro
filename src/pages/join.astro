@@ -5,6 +5,7 @@ import {HeroSlider} from "../components/hero-slider";
 import {RiArrowRightSLine} from "react-icons/ri";
 import format from 'date-fns/format/index.js';
 import { Image } from 'astro:assets';
+import JoinBtn from "./JoinBtn";
 
 let events = await getCollection("events");
 events.sort((a, b) => (new Date(b.data.date)).getTime() - (new Date(a.data.date)).getTime())
@@ -105,7 +106,9 @@ const eventsImages = [
                     today</i>.
                 </p>
                 <div class={"flex gap-4"}>
-                    <button class="relative rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg group">
+                    <JoinBtn client:visible />
+
+                    <!-- <button class="relative rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg group">
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNZFtEsPdc7kkPohz59DgsgzIqIiY1ze488YpgbfcRIEBHFg/viewform">
                             Get Membership
                         </a>
@@ -116,7 +119,7 @@ const eventsImages = [
                     ><a href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
                         Join Updates Group
                     </a>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <div class={"col-span-12 hidden lg:col-span-6 lg:block"}>

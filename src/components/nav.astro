@@ -33,6 +33,7 @@ import Logo from "../assets/logo-circle.png";
       <a href="/team">Team</a>
       <a href="/events">Events</a>
       <a href="/team/past">Past Teams</a>
+      <a href="/sponsor-us">Sponsor Us</a>
     </div>
 
     <div id="mobileMenu" class="fixed left-0 top-0 z-50 block h-full w-full bg-gray-100 md:hidden transition-all -translate-x-full duration-200 ease-out">
@@ -49,6 +50,7 @@ import Logo from "../assets/logo-circle.png";
           <a href="/events">Events</a>
           <a href="/team/past">Past Teams</a>
           <a href="/join">Interested to Join?</a>
+          <a href="/sponsor-us">Sponsor Us</a>
         </div>
       </div>
     </div>
@@ -61,14 +63,14 @@ import Logo from "../assets/logo-circle.png";
         const mobileMenu = document.getElementById("mobileMenu");
 
         // ${showMenu ? "translate-x-0" : "-translate-x-full"}
-        menuIcon.addEventListener("click", function () {
-            mobileMenu.classList.add("translate-x-0");
-            mobileMenu.classList.remove("-translate-x-full");
+        menuIcon?.addEventListener("click", function () {
+            mobileMenu?.classList.add("translate-x-0");
+            mobileMenu?.classList.remove("-translate-x-full");
         });
         
-        closeIcon.addEventListener("click", function () {
-            mobileMenu.classList.add("-translate-x-full");
-            mobileMenu.classList.remove("translate-x-0");
+        closeIcon?.addEventListener("click", function () {
+            mobileMenu?.classList.add("-translate-x-full");
+            mobileMenu?.classList.remove("translate-x-0");
         });
     });
   </script>
