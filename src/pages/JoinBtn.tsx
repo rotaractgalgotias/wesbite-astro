@@ -18,10 +18,10 @@ import {
   MessageCircle,
   MessageSquare,
   PlusCircle,
+  School,
   University,
   UserPlus,
 } from "lucide-react";
-import { RiCollageFill } from "react-icons/ri";
 
 export default function JoinBtn() {
   return (
@@ -36,7 +36,7 @@ export default function JoinBtn() {
         <DropdownMenuSeparator />
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <RiCollageFill className="mr-2 h-4 w-4" />
+            <School className="mr-2 h-4 w-4" />
             <span>Galgotias College</span>
           </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
