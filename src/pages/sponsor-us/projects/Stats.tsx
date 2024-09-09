@@ -3,16 +3,20 @@
 import { motion } from "framer-motion";
 import { Users, Briefcase, CheckCircle, Clock, Calendar, Group } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const stats = [
-  { name: "Date", value: "August 2023", icon: Calendar }, // Replace Calendar with your desired icon
-  { name: "Number of Volunteers", value: "150+", icon: Users }, // Replace Users with your desired icon
-  { name: "People Impacted", value: "1,200+", icon: Group }, // Replace Group with your desired icon
-  { name: "Duration of Event", value: "3 days", icon: Clock }, // Replace Clock with your desired icon
-];
+import {format} from "date-fns"
 
 
-export default function Stats() {
+
+
+export default function Stats({ data }: any) {
+  const formattedDate = format(data.date, "MMMM yyyy");
+  const stats = [
+    { name: "Date", value: formattedDate, icon: Calendar }, // Replace Calendar with your desired icon
+    { name: "Number of Volunteers", value: `${data.nov}+`, icon: Users }, // Replace Users with your desired icon
+    { name: "People Impacted", value: `${data.pi}+`, icon: Group }, // Replace Group with your desired icon
+    { name: "Duration of Event", value: `${data.doe}+`, icon: Clock }, // Replace Clock with your desired icon
+  ];
+  console.log(data)
   return (
     <section className="">
       <div className="container">

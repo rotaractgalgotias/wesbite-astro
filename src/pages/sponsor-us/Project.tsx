@@ -102,7 +102,7 @@ export default function Project({
               Picture {current} of {count}
             </div>
           </div>
-          <Stats />
+          <Stats data={props.data} />
         </div>
         <div className="grid gap-4">
           <div className="space-y-2 hidden lg:block">

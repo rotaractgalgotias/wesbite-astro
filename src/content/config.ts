@@ -22,7 +22,7 @@ const teamCollection = defineCollection({
     instagram: z.string().optional(),
     twitter: z.string().optional(),
     linkedin: z.string().optional(),
-    whatsapp: z.string().optional()
+    whatsapp: z.string().optional(),
   }),
 });
 
@@ -42,9 +42,11 @@ const projectCollection = defineCollection({
     date: z.date(),
     image: z.string().optional(),
     images: z.array(z.string()).optional(),
+    nov: z.number().optional(), // Number of Volunteers
+    pi: z.number().optional(), // People Impacted
+    doe: z.number().optional(),
   }),
 });
-
 
 export const collections = {
   events: eventCollection,
