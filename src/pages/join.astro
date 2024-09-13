@@ -89,45 +89,47 @@ const eventsImages = [
 >
     <main class="flex min-h-screen flex-col items-center gap-10 py-5 xl:px-24">
         <div class={"container grid grid-cols-12 gap-5"}>
-            <div class={"lg:hidden col-span-full block"}>
-                <!--<HeroSlider sliderImages={sliderImages} client:only="react" />-->
-                
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LM9zx4k2kQs?si=J5e4ZAEWFZNYOI7C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class={"lg:hidden col-span-full"}>
+              <div class="relative w-full" style="padding-bottom: 56.25%;"> 
+                {/* 16:9 Aspect Ratio */}
+                <iframe
+                class="absolute top-0 left-0 w-full h-full rounded-lg "
+                  src="https://www.youtube.com/embed/LM9zx4k2kQs?si=J5e4ZAEWFZNYOI7C"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
             <div class={"col-span-12 flex flex-col gap-4 lg:gap-8 lg:col-span-6 xl:pr-5"}>
-                <h1
-                        class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-6xl"}
-                >
-                    Your Gateway to Impactful Leadership
-                </h1>
-                <p class={"font-dmSans text-sm/relaxed text-slate-600 md:text-lg/relaxed md:w-3/4"}>
-                    Embark on a journey of leadership, service, and personal growth with the Rotaract Club at Galgotias
-                    Educational Institutions. At Rotaract, we believe in making a difference - <i>not someday, but
-                    today</i>.
-                </p>
-                <div class={"flex gap-4"}>
-                    <JoinBtn client:visible />
-
-                    <!-- <button class="relative rounded-md bg-slate-700 px-4 py-2 font-dmSans text-sm font-bold text-white transition-all duration-200 hover:bg-rose-500 md:text-lg group">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNZFtEsPdc7kkPohz59DgsgzIqIiY1ze488YpgbfcRIEBHFg/viewform">
-                            Get Membership
-                        </a>
-                    </button>
-
-                    <button
-                            class={"rounded-md bg-slate-100 px-4 py-2 font-dmSans text-lg font-bold text-slate-800"}
-                    ><a href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
-                        Join Updates Group
-                    </a>
-                    </button> -->
-                </div>
+              <h1 class={"font-outfit text-3xl font-extrabold text-slate-800 lg:text-6xl"}>
+                Your Gateway to Impactful Leadership
+              </h1>
+              <p class={"font-dmSans text-sm/relaxed text-slate-600 md:text-lg/relaxed md:w-3/4"}>
+                Embark on a journey of leadership, service, and personal growth with the Rotaract Club at Galgotias Educational Institutions. At Rotaract, we believe in making a difference - <i>not someday, but today</i>.
+              </p>
+              <div class={"flex gap-4"}>
+                <JoinBtn client:visible />
+              </div>
             </div>
             <div class={"col-span-12 hidden lg:col-span-6 lg:block"}>
-                <!--<HeroSlider sliderImages={sliderImages} client:only="react" />-->
-                <iframe  class="w-full h-full rounded-lg border-2 border-gray-300 shadow"src="https://www.youtube.com/embed/LM9zx4k2kQs?si=J5e4ZAEWFZNYOI7C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+              <div class="relative w-full" style="padding-bottom: 56.25%;"> 
+                {/* 16:9 Aspect Ratio */}
+                <iframe
+                  class="absolute top-0 left-0 w-full h-full rounded-lg "
+                  src="https://www.youtube.com/embed/LM9zx4k2kQs?si=J5e4ZAEWFZNYOI7C"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
-        </div>
+          </div>
+          
 
 
         <div class={"container flex flex-col gap-8 my-5"}>
@@ -235,7 +237,6 @@ const eventsImages = [
                                 <Image
                                     height="250"
                                     width="500" 
-                                    class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
                                     src={event.data.image}
                                     alt={event.data.title}
                                 />
@@ -243,7 +244,8 @@ const eventsImages = [
                                     <div class="font-bold text-xl mb-2">{event.data.title}</div>
                                     <div class="text-gray-700 text-justify"> {event.data.description} </div>
                                 </div>
-                            </div>
+                                                 class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+               </div>
                             <div class="flex flex-row justify-center items-center px-6 transition duration-200 ease-in-out translate-y-10 group-hover:-translate-y-0 w-full bg-blue-600 h-10">
                               <span class="text-white font-bold text-center">
                                   {format(event.data.date, 'dd MMM, yyyy')}

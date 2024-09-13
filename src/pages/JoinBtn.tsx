@@ -41,14 +41,15 @@ export default function JoinBtn() {
           </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNZFtEsPdc7kkPohz59DgsgzIqIiY1ze488YpgbfcRIEBHFg/viewform">
+              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdNZFtEsPdc7kkPohz59DgsgzIqIiY1ze488YpgbfcRIEBHFg/viewform">
                 <DropdownMenuItem>
                   <FormInputIcon className="mr-2 h-4 w-4" />
                   <span>Get Membership</span>
                 </DropdownMenuItem>
               </a>
+              
 
-              <a href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
+              <a target="_blank" href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
                 <DropdownMenuItem>
                   <MessageCircle className="mr-2 h-4 w-4" />
                   <span>Join Updates Group</span>
@@ -65,14 +66,14 @@ export default function JoinBtn() {
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
                 {/* note: link not available */}
-              <a href="#">
+              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfpDzYeotgOl5rq2AoMI1GI93NcqPKhaGv51JYx6D-1Zvqmqg/viewform?usp=pp_url">
                 <DropdownMenuItem>
                   <FormInputIcon className="mr-2 h-4 w-4" />
                   <span>Get Membership</span>
                 </DropdownMenuItem>
               </a>
 
-              <a href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
+              <a target="" href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
                 <DropdownMenuItem>
                   <MessageCircle className="mr-2 h-4 w-4" />
                   <span>Join Updates Group</span>
