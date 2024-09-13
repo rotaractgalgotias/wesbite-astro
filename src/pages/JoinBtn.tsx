@@ -73,7 +73,7 @@ export default function JoinBtn() {
                 </DropdownMenuItem>
               </a>
 
-              <a target="_blank" href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
+              <a target="" href={"https://chat.whatsapp.com/EB57TBwEsDlAE4kvpEHXuu"}>
                 <DropdownMenuItem>
                   <MessageCircle className="mr-2 h-4 w-4" />
                   <span>Join Updates Group</span>
