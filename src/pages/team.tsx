@@ -5,7 +5,7 @@ const TeamMemberComponent = ({ member, subGroupName }) => {
   // console.log(member);
   return (
     <a
-      href={"/team/" + member.fullName.toLowerCase().replace(/ /g, "-")}
+      href={"/our-team/" + member.fullName.toLowerCase().replace(/ /g, "-")}
       key={member.id}
       className={
         "col-span-3 flex flex-col items-center justify-center gap-3 md:col-span-2 xl:col-span-1"
