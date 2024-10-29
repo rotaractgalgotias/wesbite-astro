@@ -2,12 +2,15 @@
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import format from 'date-fns/format/index.js';
-import EventGallery from "../../components/event-gallery";
 import Gallery from "../../components/gallery.astro";
+import { marked } from 'marked';
 import { Image } from "astro:assets";
-export async function getStaticPaths() {
-  const events = await getCollection("events");
-  return events.map((event) => {
+
+export async  function getStaticPaths() {
+  const data = await fetch(`https://admin.rotaractgalgotias.org/api/events`).then((res) => res.json())
+  const events = data.data;
+  console.log(events);
+  return events.map((event:any) => {
     return {
       params: {
         slug: event.slug,
@@ -19,56 +22,59 @@ export async function getStaticPaths() {
   });
 }
 
-const {event} = Astro.props;
-const dateObj = new Date(event.data.date);
+const { event } = Astro.props as any;
+
+
+const dateObj = event.date ? new Date(event.date) : new Date();
 const date = {
   day: format(dateObj, 'dd'),
   month: format(dateObj, 'LLL'),
   year: format(dateObj, 'yyyy'),
   dayOfWeek: format(dateObj, 'EEEE')
 }
-const {Content} = await event.render()
+const content = marked.parse(event.content);
+// const {Content} = await event.render()
 
-// const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
-//     return files.filter(file => {
-//         const regex = /\/events\/([^/]+)\//;
-//         const match = file.default.match(regex);
-//         if (match && match[1] === event?.slug)
-//             return file.default;
-//     }).map(file => {
-//         return file.default;
-//     });
-// });
+// // const images = await Astro.glob(`/src/assets/events/*/*`).then(files => {
+// //     return files.filter(file => {
+// //         const regex = /\/events\/([^/]+)\//;
+// //         const match = file.default.match(regex);
+// //         if (match && match[1] === event?.slug)
+// //             return file.default;
+// //     }).map(file => {
+// //         return file.default;
+// //     });
+// // });
 
-const images = await import.meta.glob('/src/assets/events/*/**.{jpg,png,webp,JPG}',{eager: true});
-const photos = Object.keys(images).map( (path) => {
-  const regex = /\/events\/([^/]+)\//;
-  const match = path.match(regex);
-  if (match && match[1] === event?.slug)
-    return images[path].default;
-}).filter(image => image !== undefined);
-// console.log(photos);
+// const images = await import.meta.glob('/src/assets/events/*/**.{jpg,png,webp,JPG}',{eager: true});
+// const photos = Object.keys(images).map( (path) => {
+//   const regex = /\/events\/([^/]+)\//;
+//   const match = path.match(regex);
+//   if (match && match[1] === event?.slug)
+//     return images[path].default;
+// }).filter(image => image !== undefined);
+// // console.log(photos);
 
 
-const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp,JPG,jpeg}',{eager: true});
+// const coverImages = await import.meta.glob('/src/assets/cover/**.{jpg,png,webp,JPG,jpeg}',{eager: true});
 
-let coverImage=coverImages['/src/assets/cover/image-not-found.png'].default;
-for (const path of Object.keys(coverImages)) {
-  const regex = /\/cover\/([^/]+)\./;
-  const match = path.match(regex);
+// let coverImage=coverImages['/src/assets/cover/image-not-found.png'].default;
+// for (const path of Object.keys(coverImages)) {
+//   const regex = /\/cover\/([^/]+)\./;
+//   const match = path.match(regex);
   
-  if (match && match[1] == event?.slug) {
-    coverImage = coverImages[path]?.default
-  }
-}
+//   if (match && match[1] == event?.slug) {
+//     coverImage = coverImages[path]?.default
+//   }
+// }
 ---
 <Layout
-  title={`${event.data.title} - Rotaract Galgotias`}
-  description={event.data.description}
-  ogImage={coverImage.src}
+  title={`${event.title} - Rotaract Galgotias`}
+  description={event.description}
+  ogImage={event.coverImage}
 >
     <div class="relative mb-14 max-w-4xl  mx-auto">
-        <Image src={coverImage} alt={event.data.title} class="rounded-lg w-full"/>
+        <Image src={event.coverImage} alt={event.title ?? ""} class="rounded-lg w-full" inferSize={true}/>
 
         <div class="w-32 h-32 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
             <div class="relative w-full h-full flex-col flex justify-between">
@@ -85,9 +91,10 @@ for (const path of Object.keys(coverImages)) {
         </div>
     </div>
     <div class="prose lg:prose-lg lg:max-w-screen-lg prose-p:text-justify mx-auto">
-        <Content/>
+        <!-- <Content/> -->
+         <article set:html={content} />
 
     </div>
     <!-- <EventGallery images={photos} event={event.slug} client:only="react"/> -->
-    <Gallery images={photos} event={event.slug}/>
+    <!-- <Gallery images={photos} event={event.slug}/> -->
 </Layout>

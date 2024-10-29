@@ -1,16 +1,15 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Gallery from "react-photo-gallery";
 
 const EventGallery = ({ images, event }) => {
-
   async function getPhotosWithAspectRatio(files: any[]) {
     const images = files.map((file) => {
       return new Promise((resolve) => {
-          resolve({
-            src: file.src,
-            width: file.width / file.height,
-            height: 1,
-          });
+        resolve({
+          src: file.src,
+          width: file.width / file.height,
+          height: 1,
+        });
       });
     });
 
@@ -24,20 +23,14 @@ const EventGallery = ({ images, event }) => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    console.log(images);
     getPhotos().then((res) => {
-      console.log(res);
       setPhotos(res);
     });
   }, []);
 
-  useEffect(() => {
-    console.log(photos);
-  }, [photos]);
-
   // @ts-ignore
   return (
-    <div className={"flex flex-col gap-3 mx-auto my-4"}>
+    <div className={"mx-auto my-4 flex flex-col gap-3"}>
       <Gallery photos={photos} />
     </div>
   );

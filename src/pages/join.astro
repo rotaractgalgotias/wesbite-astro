@@ -237,8 +237,8 @@ const eventsImages = [
                                 <Image
                                     height="250"
                                     width="500" 
-                                    src={event.data.image}
-                                    alt={event.data.title}
+                                    src={event.data.image ?? ""}
+                                    alt={event.data.title ?? ""}
                                 />
                                 <div class="px-6 py-4">
                                     <div class="font-bold text-xl mb-2">{event.data.title}</div>
@@ -248,7 +248,7 @@ const eventsImages = [
                </div>
                             <div class="flex flex-row justify-center items-center px-6 transition duration-200 ease-in-out translate-y-10 group-hover:-translate-y-0 w-full bg-blue-600 h-10">
                               <span class="text-white font-bold text-center">
-                                  {format(event.data.date, 'dd MMM, yyyy')}
+                                  {format(new Date(event.data.date), 'dd MMM, yyyy')}
                               </span>
                             </div>
                         </a>

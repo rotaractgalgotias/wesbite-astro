@@ -1,23 +1,9 @@
 ---
-import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-const events: Array<{ data: { date: string } }> = await getCollection("events");
-events.sort((a, b) => (new Date(b.data.date)).getTime() - (new Date(a.data.date)).getTime())
-import format from 'date-fns/format/index.js';
-import { Image } from "astro:assets";
+const data = await fetch("https://admin.rotaractgalgotias.org/api/events").then((res) => res.json())
+const events: any[] = data.data;
 
 import EventCard from "../../components/event-card.astro";
-
-const coverImages = await import.meta.glob('/src/assets/cover/*.{jpg,png,webp}',{eager: true});
-const cover = Object.keys(coverImages).map( (path) => {
-  const regex = /\/cover\/([^/]+)\./;
-  const match = path.match(regex);
-  const filename = match[1];
-  return { [filename]: (coverImages[path] as Record<string, any>)?.default };
-});
-
-console.log(cover);
-
 ---
 
 <Layout
