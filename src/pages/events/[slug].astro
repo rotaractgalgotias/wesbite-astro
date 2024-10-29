@@ -5,6 +5,8 @@ import format from 'date-fns/format/index.js';
 import Gallery from "../../components/gallery.astro";
 import { marked } from 'marked';
 import { Image } from "astro:assets";
+import { UsLocationIndicator } from "./LocationIndicator";
+import { Badge } from "@/components/ui/badge";
 
 export async  function getStaticPaths() {
   const data = await fetch(`https://admin.rotaractgalgotias.org/api/events`).then((res) => res.json())
@@ -75,7 +77,10 @@ const content = marked.parse(event.content);
 >
     <div class="relative mb-14 max-w-4xl  mx-auto">
         <Image src={event.coverImage} alt={event.title ?? ""} class="rounded-lg w-full" inferSize={true}/>
-
+        <!-- <UsLocationIndicator city={event.location} /> -->
+         <Badge variant={"default"} className="absolute bottom-2 left-2 text-base">
+          {event.location}
+         </Badge>
         <div class="w-32 h-32 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
             <div class="relative w-full h-full flex-col flex justify-between">
                 <div class="text-2xl font-bold w-full bg-red-600 flex flex-row items-center justify-center text-center text-white py-1">
