@@ -78,18 +78,18 @@ const content = marked.parse(event.content);
     <div class="relative mb-14 max-w-4xl  mx-auto">
         <Image src={event.coverImage} alt={event.title ?? ""} class="rounded-lg w-full" inferSize={true}/>
         <!-- <UsLocationIndicator city={event.location} /> -->
-         <Badge variant={"default"} className="absolute bottom-2 left-2 text-base">
+         <Badge variant={"default"} className="absolute bottom-2 left-2 lg:text-base">
           {event.location}
          </Badge>
-        <div class="w-32 h-32 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
+        <div class="lg:w-32 lg:h-32 size-20 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
             <div class="relative w-full h-full flex-col flex justify-between">
-                <div class="text-2xl font-bold w-full bg-red-600 flex flex-row items-center justify-center text-center text-white py-1">
+                <div class="lg:text-2xl text-base font-bold w-full bg-red-600 flex flex-row items-center justify-center text-center text-white py-1">
                   {date.month.toUpperCase()}
                 </div>
-                <div class="text-5xl font-bold w-full bg-white flex flex-col items-center justify-center text-center text-black ">
+                <div class="lg:text-5xl text-xl font-bold w-full bg-white flex flex-col items-center justify-center text-center text-black ">
                   {date.day}
                 </div>
-                <div class="text-lg font-bold w-full bg-white flex flex-col items-center justify-center text-center text-gray-400 ">
+                <div class="lg:text-lg text-sm font-bold w-full bg-white flex flex-col items-center justify-center text-center text-gray-400 ">
                   {date.dayOfWeek.toUpperCase()}
                 </div>
             </div>
