@@ -76,7 +76,7 @@ const content = marked.parse(event.content);
   ogImage={event.coverImage}
 >
     <div class="relative mb-14 max-w-4xl  mx-auto">
-        <Image src={event.coverImage} alt={event.title ?? ""} class="rounded-lg w-full" inferSize={true}/>
+        <Image src={event.coverImage ?? "https://placehold.co/600x400/EEE/31343C"} alt={event.title ?? ""} class="rounded-lg w-full" inferSize={true}/>
         <!-- <UsLocationIndicator city={event.location} /> -->
          <Badge variant={"default"} className="absolute bottom-2 left-2 lg:text-base">
           {event.location}
