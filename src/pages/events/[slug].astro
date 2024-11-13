@@ -1,7 +1,7 @@
 ---
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import format from 'date-fns/format/index.js';
+import DateComp from "./DateComp";
 import Gallery from "../../components/gallery.astro";
 import { marked } from 'marked';
 import { Image } from "astro:assets";
@@ -27,13 +27,7 @@ export async  function getStaticPaths() {
 const { event } = Astro.props as any;
 
 
-const dateObj = event.date ? new Date(event.date) : new Date();
-const date = {
-  day: format(dateObj, 'dd'),
-  month: format(dateObj, 'LLL'),
-  year: format(dateObj, 'yyyy'),
-  dayOfWeek: format(dateObj, 'EEEE')
-}
+
 const content = marked.parse(event.content);
 // const {Content} = await event.render()
 
@@ -81,19 +75,7 @@ const content = marked.parse(event.content);
          <Badge variant={"default"} className="absolute bottom-2 left-2 lg:text-base">
           {event.location}
          </Badge>
-        <div class="lg:w-32 lg:h-32 size-20 rounded-lg bg-white shadow-lg absolute right-10 overflow-hidden -bottom-10">
-            <div class="relative w-full h-full flex-col flex justify-between">
-                <div class="lg:text-2xl text-base font-bold w-full bg-red-600 flex flex-row items-center justify-center text-center text-white py-1">
-                  {date.month.toUpperCase()}
-                </div>
-                <div class="lg:text-5xl text-xl font-bold w-full bg-white flex flex-col items-center justify-center text-center text-black ">
-                  {date.day}
-                </div>
-                <div class="lg:text-lg text-sm font-bold w-full bg-white flex flex-col items-center justify-center text-center text-gray-400 ">
-                  {date.dayOfWeek.toUpperCase()}
-                </div>
-            </div>
-        </div>
+        <DateComp client:visible eventDate={event.date} />
     </div>
     <div class="prose lg:prose-lg lg:max-w-screen-lg prose-p:text-justify mx-auto">
         <!-- <Content/> -->
